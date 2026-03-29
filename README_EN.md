@@ -1,10 +1,9 @@
 <div align="center">
-  <img src="https://mintlify.s3.us-west-1.amazonaws.com/coolcars/logo/light.svg" width="240" alt="CoolCars Logo">
-  
-  # 🏎️ CoolCars — The Evolution of Minecraft Transport
+  <img src="https://mintlify.s3.us-west-1.amazonaws.com/coolcars/logo/light.svg" width="220" alt="CoolCars Logo">
+  <h1>CoolCars — Minecraft Vehicle System</h1>
   
   <p align="center">
-    <b>Forget "boats on ice". Meet a full physics engine, custom 3D models, and deep driving simulation.</b>
+    <b>Advanced physics, modular customization, and high performance.</b>
   </p>
 
   [![Minecraft Version](https://img.shields.io/badge/Minecraft-1.21+-62B06F?style=for-the-badge&logo=minecraft&logoColor=white)](https://www.minecraft.net/)
@@ -18,60 +17,35 @@
 
 ---
 
-## 🌟 Why CoolCars?
+## Overview
 
-Most vehicle plugins are just renamed entities with jerky movement. **CoolCars** changes the game. We've built a system that feels like a standalone driving game inside Minecraft.
+**CoolCars** is a comprehensive solution for implementing vehicle systems on Minecraft servers. The plugin is designed with a focus on deep customization and performance, enabling the creation of unique car models with realistic behavior.
 
-### 🕹️ Real Driving Physics
-Our custom engine calculates every move. A car isn't just an object; it's a complex system:
-*   **Inertia & Drifting:** Take corners with style, feel the weight of your vehicle.
-*   **Road Grip:** Different behavior on grass, sand, and pavement.
-*   **Suspension Work:** The car reacts to terrain bumps, leaning during turns and hard braking.
+## Key Features
 
----
+*   **Physics Engine:** Custom movement simulation including acceleration, inertia, surface grip, and suspension handling.
+*   **Flexible Configuration:** YAML-based setup allows linking 3D models (CustomModelData), defining unique sounds, and technical specifications for each vehicle.
+*   **Core Systems:** Built-in mechanics for fuel, durability, repairs, trunks, and key-based access control.
+*   **User Interface:** Real-time vehicle status (speed, fuel) displayed in the Action Bar and functional GUI menus.
+*   **Optimization:** Minimal impact on server Tick Rate, even with a high number of active vehicles.
 
-## 🔥 Key Features
+## Installation
 
-### 🛠️ The YAML Workshop
-You don't need to be a coder to create a unique fleet. Use simple configs to customize:
-*   **Visuals:** Link any 3D models via `CustomModelData`.
-*   **Performance:** Speed, engine power, braking force, and turning radius.
-*   **Soundscape:** Unique engine sounds, horns, and effects for every model.
+1. Place `CoolCars.jar` into your `plugins` folder.
+2. Restart the server to generate configuration files.
+3. Verify the installation using the `/car spawn volga` command.
 
-### ⛽ Realism & Survival
-Perfectly fits into RP and Survival worlds:
-*   **Fuel System:** Customizable consumption, fuel cans, and stations.
-*   **Damage & Health:** Cars break on collisions. Repair kits are mandatory!
-*   **Personal Space:** Trunks for transport and a key system to prevent theft.
-
-### 📱 Intuitive Interface
-No complex commands while driving. Everything is on your screen:
-*   **Action Bar Speedometer:** Current speed, fuel level, and engine health are always visible.
-*   **Control Menus:** User-friendly GUIs for interacting with trunks and car systems.
-
----
-
-## 🚀 Quick Start
-
-1.  **Installation:** Place `CoolCars.jar` into your `/plugins/` folder.
-2.  **Startup:** Restart your server. The plugin will automatically create a default "Volga" model.
-3.  **First Ride:** Type `/car spawn volga` and enjoy the drive!
-
----
-
-## 📜 Command Center
+## Commands
 
 | Command | Description |
 | :--- | :--- |
 | `/car spawn <model>` | Spawn a vehicle of the selected model. |
-| `/car givekey <player> <model>` | Give a named key to a player. |
-| `/car reload` | Instantly update all configs without restarting the server. |
-| `/car list` | View all available models in your fleet. |
+| `/car givekey <player> <model>` | Give a vehicle key to a player. |
+| `/car reload` | Reload the plugin configuration. |
+| `/car list` | View the list of available models. |
 
 ---
 
 <div align="center">
-  <img src="https://via.placeholder.com/600x1/2ECC71/2ECC71" alt="divider">
-  <p><b>CoolCars — Make traversing your world truly exciting.</b></p>
-  <sub>Designed by professionals for the best Minecraft servers</sub>
+  <sub>Designed for professional Minecraft servers</sub>
 </div>
