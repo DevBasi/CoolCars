@@ -1,68 +1,48 @@
 <div align="center">
-  <a href="https://coolcars.mintlify.app/README">
-    <img src="https://mintlify.s3.us-west-1.amazonaws.com/coolcars/logo/light.svg" width="200" alt="CoolCars Logo">
-  </a>
-
-  # 🚗 CoolCars — Advanced Vehicles for Minecraft
+  <img src="https://mintlify.s3.us-west-1.amazonaws.com/coolcars/logo/light.svg" width="220" alt="CoolCars Logo">
+  <h1>CoolCars — Professional Vehicle System</h1>
   
   <p align="center">
-    <a href="README.md"><b>Russian Version (Русский)</b></a> | 
-    <a href="https://coolcars.mintlify.app/README"><b>Official Wiki</b></a> |
-    <a href="https://discord.gg/your-invite"><b>Discord</b></a>
+    <b>Realistic physics, high performance, and limitless customization possibilities.</b>
   </p>
 
   [![Minecraft Version](https://img.shields.io/badge/Minecraft-1.21+-62B06F?style=for-the-badge&logo=minecraft&logoColor=white)](https://www.minecraft.net/)
   [![Platform](https://img.shields.io/badge/Paper%20/%20Spigot-3498DB?style=for-the-badge&logo=spigotmc&logoColor=white)](https://papermc.io/)
-  [![Status](https://img.shields.io/badge/Status-FREE-2ECC71?style=for-the-badge)](https://github.com/your-username/your-repo)
   [![License](https://img.shields.io/badge/License-MIT-F1C40F?style=for-the-badge)](LICENSE)
 
   <br />
+
+  [🇷🇺 **Russian**](README.md) | [🇺🇸 **English**]
 </div>
 
 ---
 
-## 🌟 Overview
+## 💎 About
 
-**CoolCars** is a comprehensive and realistic vehicle system for your Minecraft server. It is designed with performance and deep customization in mind, allowing server owners to create and configure a wide variety of cars to fit their server's theme.
-
-> [!IMPORTANT]
-> **PROJECT IS NOW FREE!** We have opened the source code and functionality for everyone. Use, create, and share!
-
----
+**CoolCars** is a comprehensive solution for adding high-quality vehicles to your Minecraft server. Unlike standard alternatives, the plugin offers a full movement simulation, making every ride a unique gameplay experience.
 
 ## ✨ Key Features
 
-*   **🏎️ Advanced Physics:** Realistic handling including acceleration, steering, and suspension.
-*   **🛠️ Deep Customization:** Configure every aspect of a car from 3D models to performance.
-*   **📦 Modular Creation:** Define cars via simple YAML files. No coding required.
-*   **⛽ Core Systems:** Includes fuel, health, damage, repair, car keys, and trunks.
-*   **📱 Intuitive UI:** Modern action bar display for a seamless player experience.
+*   **🏎️ Physics Engine:** Realistic acceleration, braking, drifting, and suspension handling optimized for the server environment.
+*   **🛠️ Deep Customization:** Configure every detail—from 3D models (CustomModelData) to engine sounds and trunk capacity.
+*   **⛽ Gameplay Mechanics:** Built-in systems for fuel, damage, repairs, car keys, and vehicle inventories.
+*   **📱 Modern UI:** Intuitive Action Bar indicators and user-friendly control menus.
+*   **⚡ Performance:** Minimal resource usage even with a large number of active vehicles.
 
----
+## 🚀 Installation
 
-## 📖 Wiki Navigation
+1. Place the `CoolCars.jar` file into your `plugins` folder.
+2. Start the server to generate configuration files.
+3. Use the `/car spawn volga` command to test the default model.
 
-Use the following links to explore the local documentation:
+## 📜 Main Commands
 
-| Section | Link |
-| :--- | :--- |
-| **🚀 Getting Started** | [Installation Guide](installation.md) |
-| **🔧 Configuration** | [Global Config](config.md) |
-| **📂 Creation** | [How to create a car](creating-a-car/README.md) |
-| **📜 Commands** | [Commands & Permissions](commands.md) |
-| **🔊 Sounds** | [Sound configuration](sounds.md) |
-
----
-
-## 🚀 Quick Setup
-
-1. Download the latest `.jar` from [Releases]().
-2. Place it in your `/plugins/` folder.
-3. Restart your server.
-4. Type `/car spawn volga`.
+*   `/car spawn <model>` — Spawn a specific vehicle.
+*   `/car givekey <player> <model>` — Give vehicle keys to a player.
+*   `/car reload` — Reload the plugin configuration.
 
 ---
 
 <div align="center">
-  <sub>Made with ❤️ for the Minecraft community</sub>
+  <sub>Designed for the best Minecraft servers</sub>
 </div>
