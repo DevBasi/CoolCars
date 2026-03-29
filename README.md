@@ -1,28 +1,79 @@
-# Introduction
+<div align="center">
+  <img src="https://mintlify.s3.us-west-1.amazonaws.com/coolcars/logo/light.svg" width="200" alt="CoolCars Logo">
+  <h1>🚗 CoolCars — Реалистичный транспорт в Minecraft</h1>
+  <p><b>Продвинутая физика, глубокая кастомизация и модульная система создания автомобилей.</b></p>
 
-Welcome to the official documentation for **CoolCars**!
-
-This plugin provides a comprehensive and realistic vehicle system for your Minecraft server. It is designed with performance and deep customization in mind, allowing server owners to create and configure a wide variety of cars to fit their server's theme.
-
-## Key Features
-
-*   **Advanced Physics:** A custom physics engine provides realistic vehicle handling, including acceleration, steering, suspension, and grip.
-*   **Deep Customization:** Every aspect of a car is configurable, from the 3D model and sounds to the performance, health, and behavior.
-*   **Modular Car Creation:** Define cars through a set of simple YAML files. You can create a new car model just by creating a new folder and defining its properties.
-*   **Core Systems:** Includes essential vehicle features like fuel, health & damage, repair, car keys, and trunks.
-*   **Intuitive UI:** A clean and modern action bar display and in-car menu provide a seamless experience for players.
-*   **Performance-Focused:** Optimized to ensure minimal impact on server performance.
-
-## How to Use This Documentation
-
-This GitBook is designed to guide you through every feature of the CoolCars plugin.
-
-*   **Installation:** Get the plugin up and running on your server.
-*   **Global Configuration:** Understand all the settings in the main `config.yml`.
-*   **Creating a Car:** A step-by-step guide to creating your very own custom car model from scratch. This is where the magic happens!
-*   **Commands & Permissions:** A complete reference for all plugin commands and their associated permissions.
-
-We recommend starting with the **Installation** guide and then moving on to **Creating a Car** to get a feel for the plugin's power.
+  [![Minecraft Version](https://img.shields.io/badge/Версия-1.21+-green?style=for-the-badge&logo=minecraft&logoColor=white)](https://www.minecraft.net/)
+  [![Platform](https://img.shields.io/badge/Платформа-Paper%20/%20Spigot-blue?style=for-the-badge&logo=spigotmc&logoColor=white)](https://papermc.io/)
+  [![License](https://img.shields.io/badge/Лицензия-MIT-yellow?style=for-the-badge)](LICENSE)
+  [![Status](https://img.shields.io/badge/Статус-Теперь%20бесплатно!-brightgreen?style=for-the-badge)]()
+  
+  <br />
+  
+  [📖 Документация](https://coolcars.mintlify.app/ru/README) • [🚀 Установка](installation.md) • [💬 Поддержка](https://discord.gg/your-invite)
+</div>
 
 ---
-> **Developer Note:** A great intro video would be a short, cinematic showcase of a few different cars driving around in various environments (city, off-road). This would give new users an exciting first look at what the plugin can do.
+
+[🇺🇸 English version available here](README_EN.md)
+
+---
+
+## 🌟 Введение
+
+Добро пожаловать в официальную документацию **CoolCars**! Этот плагин предоставляет комплексную и реалистичную систему транспортных средств для вашего сервера Minecraft. Он разработан с упором на производительность и глубокую кастомизацию, позволяя владельцам серверов создавать и настраивать самые разные автомобили под тематику своего сервера.
+
+> [!IMPORTANT]
+> **CoolCars теперь полностью БЕСПЛАТЕН!** Изначально это был премиум-плагин, но теперь мы открыли его для всего сообщества, чтобы каждый мог добавить качественный транспорт на свой сервер.
+
+---
+
+## ✨ Основные возможности
+
+*   **🏎️ Продвинутая физика:** Собственный физический движок обеспечивает реалистичное управление транспортным средством, включая ускорение, рулевое управление, подвеску и сцепление.
+*   **🛠️ Глубокая кастомизация:** Каждый аспект автомобиля настраивается — от 3D-модели и звуков до производительности, прочности и поведения.
+*   **📦 Модульное создание:** Машины описываются набором простых YAML-файлов. Вы можете создать новую модель, просто добавив папку и настроив её свойства.
+*   **⛽ Базовые системы:** Включает такие важные функции, как топливо, здоровье и повреждения, ремонт, ключи и багажники.
+*   **📱 Интуитивный интерфейс:** Чистый и современный дисплей в экшн-баре и меню внутри автомобиля обеспечивают удобство для игроков.
+*   **⚡ Оптимизация:** Плагин максимально оптимизирован для минимального влияния на производительность сервера.
+
+---
+
+## 🚀 Быстрый старт
+
+### Установка
+1.  **Скачайте** последнюю версию `CoolCars.jar` из [Releases](https://github.com/your-username/your-repo/releases).
+2.  **Поместите** файл в папку `plugins` вашего сервера.
+3.  **Запустите** сервер для генерации стандартных конфигураций.
+4.  **Проверьте** работу командой: `/car spawn volga`.
+
+Подробная инструкция: [Установка](installation.md)
+
+---
+
+## 📖 Навигация по разделам
+
+| Раздел | Описание |
+| :--- | :--- |
+| [📂 Создание машины](creating-a-car/README.md) | Пошаговый гайд по созданию своих моделей с нуля. |
+| [🔧 Глобальная конфигурация](config.md) | Настройка основного файла `config.yml`. |
+| [📜 Команды и права](commands.md) | Полный список команд и их пермишенов. |
+| [📦 Предметы](items.md) | Ключи, канистры с топливом, ремонтные комплекты. |
+| [🔊 Звуки](sounds.md) | Настройка кастомных звуков для двигателей и эффектов. |
+| [🔗 Placeholders](placeholders.md) | Поддержка PlaceholderAPI. |
+
+---
+
+## 🤝 Участие в разработке
+
+Мы будем рады вашим Pull Requests и сообщениям об ошибках!
+1. Сделайте Fork проекта.
+2. Создайте свою ветку (`git checkout -b feature/NewFeature`).
+3. Закоммитьте изменения (`git commit -m 'Добавлена новая фича'`).
+4. Отправьте ветку в GitHub и создайте PR.
+
+---
+
+<div align="center">
+  <p>Сделано с ❤️ командой CoolCars</p>
+</div>
