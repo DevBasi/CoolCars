@@ -1,0 +1,179 @@
+# ============================================================================
+# Language File: English (en)
+# ----------------------------------------------------------------------------
+# Purpose:
+# This file contains all user-facing texts for the plugin.
+#
+# Placeholder rules:
+# {0}, {1}, {2} ... are dynamic placeholders inserted by code.
+# Common usage:
+# - {0} in most messages = prefix (from key `prefix`)
+# - other indexes are message-specific values (UUID, liters, coordinates, etc.)
+#
+# Color rules:
+# - Use '&' color codes (e.g. &a, &c, &7, &8).
+# - Keep placeholders untouched when translating.
+# ============================================================================
+
+# [GLOBAL PREFIX]
+# Shown at the start of most chat messages.
+prefix: "&8[&6Cars&8] &7"
+
+# [COMMAND: GENERIC]
+# Message shown when command is executed from console/non-player sender.
+command.only-player: "{0}Only players can use this command."
+command.no-permission: "{0}&cYou do not have permission to do this."
+
+# [COMMAND USAGE HINTS]
+# Help lines shown when user enters incomplete/invalid command args.
+command.usage.spawncar: "{0}Usage: /car spawn <model>"
+command.usage.fuel: "{0}Usage: /fuel give [liters] | /fuel set <liters>"
+command.usage.repair: "{0}Usage: /repair give [units] | /repair set <units>"
+command.usage.car: "{0}Usage: /car help | /car spawn <model> | /car info <uuid> | /car list | /car remove <uuid> | /car reload | /car repairhitbox <on|off>"
+command.usage.lang: "{0}Usage: /lang set <en|ru> | /lang auto | /lang server <en|ru> | /lang"
+
+# [SPAWN FLOW]
+# Success/failure messages for spawning and initial mounting.
+spawn.success: "{0}&aCar spawned."
+spawn.mount-failed: "{0}&cFailed to mount driver seat."
+
+# [SEAT FLOW]
+# Messages for entering vehicle seats.
+seat.no-free: "{0}&cNo free seats in this car."
+seat.enter-failed: "{0}&cFailed to enter car."
+seat.driver: "{0}&aYou are now the driver."
+seat.passenger: "{0}&aYou entered passenger seat."
+
+# [TRUNK]
+# Message shown when player is too far to open trunk.
+trunk.too-far: "{0}&cToo far from trunk."
+
+# [FUEL / REFUEL FLOW]
+# Messages related to fuel checks and refueling process.
+fuel.hold-shift: "{0}&eHold SHIFT and right-click to refuel."
+fuel.need-canister: "{0}&cHold a fuel canister in your main hand."
+fuel.canister-empty: "{0}&cYour canister is empty."
+fuel.tank-full: "{0}&eTank is already full."
+fuel.started: "{0}&aRefueling started. Hold SHIFT to continue..."
+fuel.stopped-release: "{0}&eRefuel stopped: release detected."
+fuel.too-far: "{0}&cToo far from fuel point."
+fuel.stopped-no-can: "{0}&cRefuel stopped: no canister in hand."
+fuel.complete: "{0}&aRefueling complete."
+
+# [FUEL COMMAND OUTPUT]
+# {1} = liters value.
+fuel.canister.given: "{0}&aFuel canister received: &f{1}&a L"
+fuel.canister.set: "{0}&aCanister filled to &f{1}&a L"
+
+# [CAR MANAGEMENT COMMANDS]
+# /car list, /car remove outputs.
+car.none: "{0}&eNo active cars."
+car.list.header: "{0}&aActive cars: &f{1}"
+# {1}=uuid, {2}=world, {3}={x}, {4}={y}, {5}={z}, {6}=hp, {7}=max hp, {8}=fuel, {9}=tank cap
+car.list.entry: "{0}&7{1} &8| &7{2} {3} {4} {5} &8| &7HP {6}/{7} &8| &7Fuel {8}/{9}L"
+car.remove.invalid-uuid: "{0}&cInvalid UUID."
+car.remove.not-found: "{0}&cCar not found."
+car.remove.done: "{0}&aCar removed: &f{1}"
+car.reload.done: "{0}&aPlugin reloaded, cars restored: &f{1}"
+
+# [LANGUAGE COMMAND]
+# /lang related responses.
+lang.current: "{0}&aCurrent language: &f{1}"
+lang.set.done: "{0}&aLanguage set to &f{1}"
+lang.set.auto: "{0}&aLanguage set to auto (client locale)."
+lang.global.locked: "{0}&eGlobal language mode is enabled. Personal language is disabled."
+lang.server.set: "{0}&aServer default language set to &f{1}&a. Config docs synced."
+
+# [UI LABELS - ACTION BAR]
+# Short labels used in runtime HUD/action bar.
+ui.speed: "Speed "
+ui.passengers: "Passengers "
+ui.hp: "HP "
+ui.fuel: "Fuel "
+ui.refuel: "Refueling "
+ui.repair: "Repair "
+ui.hold-shift: " (hold SHIFT)"
+ui.damage-short: "DMG"
+ui.can-short: "Can"
+ui.kit-short: "Kit"
+actionbar.car: "&7{speed_label}&b{speed_kmh} &7km/h &8| &7{passengers_label}{seats_color}{passengers}/{passengers_max} &8| &7{hp_label}{hp_color}{hp}/{hp_max} &7{hp_bar} &8| &7{fuel_label}{fuel_color}{fuel}/{fuel_max}L &7({fuel_percent}%) {damage_block}"
+actionbar.refuel: "&6{refuel_label}&e{progress_bar} &7{progress_percent}% &8| &b{tank_label} {tank}/{tank_max}L &8| &a{can_label} {canister}/{canister_max}L{hold_shift}"
+actionbar.repair: "&b{repair_label}&f{part} &a{part_bar} &7{part_percent}% &8| &e{kit_label} {kit}/{kit_max}{hold_shift}"
+
+# [UI FORMATS - ACTION BAR]
+# Structured templates for refuel status line.
+# {0}=current value, {1}=max value
+ui.tank: "Tank {0}/{1}L"
+ui.can: "Can {0}/{1}L"
+ui.kit: "Kit {0}/{1}"
+
+repair.disabled: "{0}&cAdvanced car damage is disabled in config."
+repair.need-kit: "{0}&cHold a repair kit in your main hand."
+repair.kit-empty: "{0}&cYour repair kit is empty."
+repair.part-full: "{0}&e{1} is already fully repaired."
+repair.started: "{0}&aRepair started: &f{1}&a. Hold SHIFT to continue..."
+repair.stopped-release: "{0}&eRepair stopped: release detected."
+repair.too-far: "{0}&cToo far from target part."
+repair.stopped-no-kit: "{0}&cRepair stopped: no repair kit in hand."
+repair.complete: "{0}&aRepair complete: &f{1}"
+repair.kit.given: "{0}&aRepair kit received: &f{1}&a units"
+repair.kit.set: "{0}&aRepair kit set to &f{1}&a units"
+
+damage.part.front: "Front"
+damage.part.rear: "Rear"
+damage.part.wheel-fl: "Front-Left Wheel"
+damage.part.wheel-fr: "Front-Right Wheel"
+damage.part.wheel-rl: "Rear-Left Wheel"
+damage.part.wheel-rr: "Rear-Right Wheel"
+car.engine.on: "{0}&aEngine started."
+car.engine.off: "{0}&eEngine stopped."
+car.lights.on: "{0}&eHeadlights enabled."
+car.lights.off: "{0}&7Headlights disabled."
+menu.car.title: "&8Car Menu"
+menu.car.engine.on: "&aEngine: ON"
+menu.car.engine.off: "&cEngine: OFF"
+menu.car.lights.on: "&eHeadlights: ON"
+menu.car.lights.off: "&7Headlights: OFF"
+menu.car.trunk: "&6Open trunk"
+menu.car.trunk.hint: "&7Open trunk"
+menu.car.toggle.hint: "&7Click to toggle"
+trunk.title: "&8Trunk"
+
+help.cars.title: "{0}&8&m---------------- &6Cars Help &8&m----------------"
+help.cars.section.core: "{0}&e[Transport]"
+help.cars.core.spawn: "{0}&7/car spawn <model> &8- &fSpawn configured car model"
+help.cars.core.menu: "{0}&7Press &fF &7in driver seat &8- &fOpen car menu"
+help.cars.core.list: "{0}&7/car list &8- &fShow active cars and UUIDs"
+help.cars.section.fuel: "{0}&e[Fuel]"
+help.cars.fuel.give: "{0}&7/fuel give [liters] &8- &fGet a fuel canister"
+help.cars.fuel.set: "{0}&7/fuel set <liters> &8- &fSet canister fuel in hand"
+help.cars.fuel.use: "{0}&7SHIFT + RMB near fuel point &8- &fStart refuel"
+help.cars.section.repair: "{0}&e[Repair]"
+help.cars.repair.give: "{0}&7/repair give [units] &8- &fGet a repair kit"
+help.cars.repair.set: "{0}&7/repair set <units> &8- &fSet repair kit units"
+help.cars.repair.use: "{0}&7SHIFT + RMB on car part &8- &fRepair that part"
+help.cars.section.lang: "{0}&e[Language]"
+help.cars.lang.self: "{0}&7/lang set <en|ru> &8- &fSet your language"
+help.cars.lang.auto: "{0}&7/lang auto &8- &fUse client locale"
+help.cars.lang.server: "{0}&7/lang server <en|ru> &8- &fSet server default"
+help.cars.section.admin: "{0}&e[Admin]"
+help.cars.admin.remove: "{0}&7/car remove <uuid> &8- &fRemove car by UUID"
+help.cars.admin.reload: "{0}&7/car reload &8- &fReload plugin and restore cars"
+help.cars.admin.repair-hitbox: "{0}&7/car repairhitbox <on|off> &8- &fShow/hide repair part hitboxes"
+help.cars.footer: "{0}&8&m-------------------------------------------------"
+
+car.repair-hitbox.enabled: "{0}&aRepair hitbox preview enabled."
+car.repair-hitbox.disabled: "{0}&eRepair hitbox preview disabled."
+car.repair-hitbox.already-on: "{0}&eRepair hitbox preview is already enabled."
+car.repair-hitbox.already-off: "{0}&eRepair hitbox preview is already disabled."
+spawn.unknown-model: "{0}&cUnknown car model: &f{1}"
+spawn.available-models: "{0}&eAvailable models: &f{1}"
+repair.hitbox-only: "{0}&eRepair works only by clicking repair hitboxes. Use /car repairhitbox on to show them."
+car.info.not-found: "{0}&cCar not found."
+car.info.header: "{0}&6Car details:"
+car.info.id: "{0}&7ID: &f{1}"
+car.info.model: "{0}&7Model: &f{1} &8(&7{2}&8)"
+car.info.owner: "{0}&7Owner: &f{1} &8| &7UUID: &f{2}"
+car.info.location: "{0}&7Location: &f{1} &8| &f{2}"
+car.info.state: "{0}&7HP: &f{1}/{2} &8| &7Fuel: &f{3}/{4}L &8| &7Engine: &f{5} &8| &7Lights: &f{6}"
+help.cars.admin.info: "{0}&7/car info <uuid> &8- &fShow detailed car info (owner/model/state)"

@@ -1,0 +1,480 @@
+﻿# Volga documentation (RU)
+# Формат: это копия структуры конфигов Volga с подсказками к каждому пункту.
+
+components:
+  car:
+    meta:
+      # Отображаемое имя модели в /car spawn и /car list
+      display-name: Volga
+
+    models:
+      # Материал кузова (ItemDisplay)
+      body-material: IRON_INGOT
+      # CustomModelData кузова (-1 отключает)
+      body-custom-model-data: 1
+      # Материал кузова при включенных фарах
+      body-material-headlights: IRON_INGOT
+      # CMD кузова при включенных фарах
+      body-material-headlights-custom-model-data: 1
+      # Базовый материал колес
+      wheel-material: IRON_INGOT
+      # Базовый CMD колес
+      wheel-custom-model-data: 2
+      wheels:
+        # Дефолтный материал колес
+        default: IRON_INGOT
+        # Дефолтный CMD колес
+        default-custom-model-data: 2
+        # Материал переднего левого колеса
+        front-left: IRON_INGOT
+        # CMD переднего левого колеса
+        front-left-custom-model-data: 2
+        # Материал переднего правого колеса
+        front-right: IRON_INGOT
+        # CMD переднего правого колеса
+        front-right-custom-model-data: 2
+        # Материал заднего левого колеса
+        rear-left: IRON_INGOT
+        # CMD заднего левого колеса
+        rear-left-custom-model-data: 2
+        # Материал заднего правого колеса
+        rear-right: IRON_INGOT
+        # CMD заднего правого колеса
+        rear-right-custom-model-data: 2
+      # Материал руля
+      steering-wheel-material: IRON_INGOT
+      # CMD руля
+      steering-wheel-custom-model-data: 3
+
+    menu:
+      # Показывать кнопку багажника в меню
+      trunk-button-enabled: true
+      slots:
+        # Слот кнопки двигателя (0..26)
+        engine: 11
+        # Слот кнопки багажника (0..26)
+        trunk: 13
+        # Слот кнопки фар (0..26)
+        lights: 15
+      style:
+        filler:
+          # Материал заполнителя меню
+          material: BLACK_STAINED_GLASS_PANE
+          # Название заполнителя меню
+          name: "&8 "
+        items:
+          engine:
+            # Иконка двигателя (вкл)
+            material-on: LIME_DYE
+            # Иконка двигателя (выкл)
+            material-off: RED_DYE
+          lights:
+            # Иконка фар (вкл)
+            material-on: GLOWSTONE_DUST
+            # Иконка фар (выкл)
+            material-off: COAL
+          trunk:
+            # Иконка багажника
+            material: CHEST
+
+    interaction:
+      # Ширина interaction-hitbox
+      hitbox-width: 2.3
+      # Высота interaction-hitbox
+      hitbox-height: 1.8
+
+    seats:
+      offsets:
+        # Смещение сиденья 1 (x/y/z от центра машины)
+        - x: 0.70
+          y: -0.40
+          z: 0.54
+        # Смещение сиденья 2
+        - x: -0.55
+          y: -0.40
+          z: 0.54
+        # Смещение сиденья 3
+        - x: -0.50
+          y: -0.40
+          z: -0.62
+        # Смещение сиденья 4
+        - x: 0.80
+          y: -0.40
+          z: -0.62
+
+    visual:
+      # Интерполяция display-сущностей
+      interpolation-duration: 2
+      # Плавность телепорта display-сущностей
+      teleport-duration: 2
+
+      body-offset:
+        # Смещение кузова по X
+        x: 0.0
+        # Смещение кузова по Y
+        y: 1.20
+        # Смещение кузова по Z
+        z: 0.0
+
+      steering-wheel-offset:
+        # Смещение руля по X
+        x: 0.70
+        # Смещение руля по Y
+        y: 1.20
+        # Смещение руля по Z
+        z: 0.92
+
+      wheel-offsets:
+        # Смещение колеса 1
+        - x: -1.20
+          y: 0.50
+          z: 2.40
+        # Смещение колеса 2
+        - x: 1.20
+          y: 0.50
+          z: 2.40
+        # Смещение колеса 3
+        - x: -1.20
+          y: 0.50
+          z: -1.95
+        # Смещение колеса 4
+        - x: 1.20
+          y: 0.50
+          z: -1.95
+
+    lights:
+      headlight-offsets:
+        # Смещение фары 1
+        - x: -0.46
+          y: 0.78
+          z: 1.72
+        # Смещение фары 2
+        - x: 0.46
+          y: 0.78
+          z: 1.72
+      # Дальность света
+      range: 12.0
+      # Яркость (1..15)
+      level: 15
+      # Частота обновления света (тики)
+      update-ticks: 2
+      # Показывать визуальные эффекты фар
+      visible-effects: false
+
+    exhaust:
+      # Включить выхлоп
+      enabled: true
+      offsets:
+        # Смещение выхлопа 1
+        - x: -0.34
+          y: 0.48
+          z: -1.95
+        # Смещение выхлопа 2
+        - x: 0.34
+          y: 0.48
+          z: -1.95
+      # Частота выхлопа (тики)
+      update-ticks: 2
+      # Минимальный газ для выхлопа
+      min-throttle: 0.12
+      # Усиление выхлопа от скорости
+      speed-factor: 0.14
+      # Базовое число частиц
+      base-count: 1
+      # Максимум частиц
+      max-count: 8
+
+    trunk:
+      # Размер багажника (кратно 9)
+      slots: 18
+      point-offset:
+        # Точка багажника X
+        x: 0.0
+        # Точка багажника Y
+        y: 0.95
+        # Точка багажника Z
+        z: -2.05
+
+    fuel:
+      point-offset:
+        # Точка заправки X
+        x: 0.0
+        # Точка заправки Y
+        y: 0.60
+        # Точка заправки Z
+        z: -1.95
+
+performance:
+  car:
+    suspension:
+      # Длина подвески в покое
+      rest-length: 0.55
+      # Жесткость подвески
+      stiffness: 21000.0
+      # Демпфирование подвески
+      damping: 2100.0
+      # Радиус колеса для физики
+      wheel-radius: 0.36
+      # Высота преодоления ступенек
+      step-height: 1.0
+
+    drivetrain:
+      # Сила двигателя
+      engine-force: 9700.0
+      # Множитель ускорения вперед
+      acceleration-forward: 1.0
+      # Множитель ускорения назад
+      acceleration-reverse-multiplier: 0.58
+      # Экспонента кривой газа
+      acceleration-curve-exponent: 1.0
+      # Сила торможения
+      brake-force: 15000.0
+      # Множитель торможения
+      brake-multiplier: 1.0
+      # Максималка вперед (м/с)
+      max-forward-speed: 34.0
+      # Максималка назад (м/с)
+      max-reverse-speed: 9.5
+
+    steering:
+      # Максимальный угол поворота
+      max-steer-deg: 28.0
+      # Колесная база
+      wheel-base: 2.65
+      # Скорость реакции руля
+      steer-response: 0.20
+      # Ограничение крена кузова
+      body-roll-limit-deg: 40.0
+      # Скорость реакции крена
+      body-roll-response: 0.12
+      # Сила крена кузова
+      body-roll-strength: 1.35
+
+    physics:
+      # Масса машины
+      mass: 1250.0
+      # Аэродинамическое сопротивление
+      drag-coeff: 0.018
+      # Сопротивление качению
+      rolling-resistance: 55.0
+      # Вертикальное демпфирование
+      vertical-damping: 3.8
+      # Поперечное сцепление на земле
+      lateral-grip-ground: 5.4
+      # Поперечное сцепление в воздухе
+      lateral-grip-air: 0.9
+      # Лимит изменения скорости за тик
+      max-tick-horizontal-delta-v: 0.74
+
+    fuel:
+      # Емкость бака (литры)
+      tank-capacity: 60.0
+      # Начальное топливо при спавне
+      initial-fuel: 35.0
+      consumption:
+        # Базовый расход за тик
+        base-per-tick: 0.0008
+        # Доп. расход от скорости
+        speed-factor: 0.00020
+        # Доп. расход от газа
+        throttle-factor: 0.00120
+
+behavior:
+  car:
+    horn:
+      # Включить сигнал
+      enabled: true
+      # Разрешать сигнал только в движении
+      require-moving: true
+      # Кулдаун сигнала (тики)
+      cooldown-ticks: 24
+      # Ключ звука сигнала
+      sound: ENTITY_GOAT_HORN_SOUND_0
+      # Громкость сигнала
+      volume: 1.35
+      # Тон сигнала
+      pitch: 0.75
+
+    collision:
+      # Половина ширины коллизии
+      half-width: 0.95
+      # Половина длины коллизии
+      half-length: 1.40
+      # Высота коллизии
+      height: 1.45
+      # Базовый Y коллизии
+      base-y: 0.32
+      # Скольжение об препятствия
+      slide-factor: 0.92
+      # Потеря скорости о стены
+      wall-damping: 0.90
+      # Максимальный подъем при unstuck
+      unstuck-max-lift: 1.2
+
+    health:
+      # Максимальное HP
+      max: 1000.0
+      # Процент HP, где глушится двигатель
+      engine-disabled-health-percent: 0.10
+      # Уничтожать машину при 0 HP
+      destroy-on-zero: true
+      # Пассивный урон за тик
+      idle-damage-per-tick: 0.0
+
+      impact:
+        # Мин. скорость удара для урона
+        min-delta-speed: 4.0
+        # Масштаб урона от удара
+        damage-scale: 12.0
+        # Множитель урона о стену
+        wall-multiplier: 1.15
+
+      regen:
+        # Включить реген HP
+        enabled: true
+        # Реген HP за тик
+        per-tick: 0.20
+        # Задержка перед регеном
+        delay-ticks: 80
+
+    damage:
+      # Включить урон по частям
+      enabled: true
+
+      parts:
+        front:
+          # Передняя часть участвует в уроне
+          enabled: true
+          # HP передней части
+          max-health: 350.0
+        rear:
+          # Задняя часть участвует в уроне
+          enabled: true
+          # HP задней части
+          max-health: 300.0
+        wheels:
+          # Колеса участвуют в уроне
+          enabled: true
+          # HP колес
+          max-health: 120.0
+
+      impact:
+        # Множитель урона для переда
+        front-multiplier: 1.20
+        # Множитель урона для зада
+        rear-multiplier: 1.00
+        # Множитель урона для колес
+        wheel-multiplier: 0.45
+
+      performance:
+        # Порог, где начинается потеря мощности
+        slowdown-start-percent: 0.35
+        # Минимум мощности при 0 HP части
+        min-factor-at-zero: 0.35
+
+      visual:
+        # Порог дыма
+        smoke-threshold-percent: 0.20
+
+      hitbox:
+        front-offset:
+          # Смещение хитбокса переда X
+          x: 0.0
+          # Смещение хитбокса переда Y
+          y: 0.75
+          # Смещение хитбокса переда Z
+          z: 1.95
+        rear-offset:
+          # Смещение хитбокса зада X
+          x: 0.0
+          # Смещение хитбокса зада Y
+          y: 0.75
+          # Смещение хитбокса зада Z
+          z: -2.05
+
+    combat:
+      ram:
+        # Включить таран
+        enabled: true
+        # Мин. скорость для тарана
+        min-speed: 7.0
+        # Базовый урон тараном
+        base-damage: 2.0
+        # Добавка урона от скорости
+        speed-damage-factor: 0.55
+        # Макс. урон тараном
+        max-damage: 20.0
+        # Горизонтальный отталкивающий импульс
+        knockback-horizontal: 1.15
+        # Вертикальный отталкивающий импульс
+        knockback-vertical: 0.25
+        # Кулдаун урона по одной цели
+        hit-cooldown-ticks: 10
+        # Наносить урон игрокам
+        affect-players: false
+        # Наносить урон мобам
+        affect-mobs: true
+        # Потеря скорости машины после тарана
+        self-speed-loss-factor: 0.92
+
+    fuel:
+      # Замедление машины без топлива
+      no-fuel-brake-factor: 0.93
+      # Скорость заправки (л/тик)
+      refuel-rate-liters-per-tick: 0.10
+      # Интервал звука заправки
+      refuel-sound-interval-ticks: 6
+
+localization:
+  car:
+    menu:
+      localization:
+        en:
+          # Заголовок меню машины (EN)
+          title: "&8Car Menu"
+          # Кнопка двигателя вкл (EN)
+          engine-on: "&aEngine: ON"
+          # Кнопка двигателя выкл (EN)
+          engine-off: "&cEngine: OFF"
+          # Кнопка фар вкл (EN)
+          lights-on: "&eHeadlights: ON"
+          # Кнопка фар выкл (EN)
+          lights-off: "&7Headlights: OFF"
+          # Кнопка багажника (EN)
+          trunk: "&6Open trunk"
+          # Подсказка переключения (EN)
+          toggle-hint: "&7Click to toggle"
+          # Подсказка багажника (EN)
+          trunk-hint: "&7Open trunk"
+        ru:
+          # Заголовок меню машины (RU)
+          title: "&8Меню машины"
+          # Кнопка двигателя вкл (RU)
+          engine-on: "&aДвигатель: ВКЛ"
+          # Кнопка двигателя выкл (RU)
+          engine-off: "&cДвигатель: ВЫКЛ"
+          # Кнопка фар вкл (RU)
+          lights-on: "&eФары: ВКЛ"
+          # Кнопка фар выкл (RU)
+          lights-off: "&7Фары: ВЫКЛ"
+          # Кнопка багажника (RU)
+          trunk: "&6Открыть багажник"
+          # Подсказка переключения (RU)
+          toggle-hint: "&7Нажмите, чтобы переключить"
+          # Подсказка багажника (RU)
+          trunk-hint: "&7Открыть багажник"
+
+    trunk:
+      # Использовать ключ локализации как заголовок
+      use-lang-title: true
+      # Ключ из lang/*.yml для заголовка
+      title-lang-key: trunk.title
+      # Резервный заголовок
+      title: "Trunk"
+      localization:
+        en:
+          # Заголовок багажника EN
+          title: "&8Trunk"
+        ru:
+          # Заголовок багажника RU
+          title: "&8Багажник"

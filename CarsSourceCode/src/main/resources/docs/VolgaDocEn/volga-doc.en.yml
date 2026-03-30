@@ -1,0 +1,480 @@
+﻿# Volga documentation (EN)
+# Format: exact copy of Volga config structure with hints for every field.
+
+components:
+  car:
+    meta:
+      # Model display name shown in /car spawn and /car list
+      display-name: Volga
+
+    models:
+      # Body item material (ItemDisplay)
+      body-material: IRON_INGOT
+      # Body CustomModelData (-1 disables CMD)
+      body-custom-model-data: 1
+      # Body material when headlights are on
+      body-material-headlights: IRON_INGOT
+      # Body CMD when headlights are on
+      body-material-headlights-custom-model-data: 1
+      # Base wheel material
+      wheel-material: IRON_INGOT
+      # Base wheel CMD
+      wheel-custom-model-data: 2
+      wheels:
+        # Default wheel material
+        default: IRON_INGOT
+        # Default wheel CMD
+        default-custom-model-data: 2
+        # Front-left wheel material
+        front-left: IRON_INGOT
+        # Front-left wheel CMD
+        front-left-custom-model-data: 2
+        # Front-right wheel material
+        front-right: IRON_INGOT
+        # Front-right wheel CMD
+        front-right-custom-model-data: 2
+        # Rear-left wheel material
+        rear-left: IRON_INGOT
+        # Rear-left wheel CMD
+        rear-left-custom-model-data: 2
+        # Rear-right wheel material
+        rear-right: IRON_INGOT
+        # Rear-right wheel CMD
+        rear-right-custom-model-data: 2
+      # Steering wheel material
+      steering-wheel-material: IRON_INGOT
+      # Steering wheel CMD
+      steering-wheel-custom-model-data: 3
+
+    menu:
+      # Show trunk button in car menu
+      trunk-button-enabled: true
+      slots:
+        # Engine button slot index (0..26)
+        engine: 11
+        # Trunk button slot index (0..26)
+        trunk: 13
+        # Lights button slot index (0..26)
+        lights: 15
+      style:
+        filler:
+          # Menu filler material
+          material: BLACK_STAINED_GLASS_PANE
+          # Menu filler name
+          name: "&8 "
+        items:
+          engine:
+            # Engine icon when ON
+            material-on: LIME_DYE
+            # Engine icon when OFF
+            material-off: RED_DYE
+          lights:
+            # Lights icon when ON
+            material-on: GLOWSTONE_DUST
+            # Lights icon when OFF
+            material-off: COAL
+          trunk:
+            # Trunk icon material
+            material: CHEST
+
+    interaction:
+      # Interaction hitbox width
+      hitbox-width: 2.3
+      # Interaction hitbox height
+      hitbox-height: 1.8
+
+    seats:
+      offsets:
+        # Seat 1 offset (x/y/z from vehicle center)
+        - x: 0.70
+          y: -0.40
+          z: 0.54
+        # Seat 2 offset
+        - x: -0.55
+          y: -0.40
+          z: 0.54
+        # Seat 3 offset
+        - x: -0.50
+          y: -0.40
+          z: -0.62
+        # Seat 4 offset
+        - x: 0.80
+          y: -0.40
+          z: -0.62
+
+    visual:
+      # Display interpolation duration
+      interpolation-duration: 2
+      # Display teleport smoothing duration
+      teleport-duration: 2
+
+      body-offset:
+        # Body offset X
+        x: 0.0
+        # Body offset Y
+        y: 1.20
+        # Body offset Z
+        z: 0.0
+
+      steering-wheel-offset:
+        # Steering wheel offset X
+        x: 0.70
+        # Steering wheel offset Y
+        y: 1.20
+        # Steering wheel offset Z
+        z: 0.92
+
+      wheel-offsets:
+        # Wheel 1 offset
+        - x: -1.20
+          y: 0.50
+          z: 2.40
+        # Wheel 2 offset
+        - x: 1.20
+          y: 0.50
+          z: 2.40
+        # Wheel 3 offset
+        - x: -1.20
+          y: 0.50
+          z: -1.95
+        # Wheel 4 offset
+        - x: 1.20
+          y: 0.50
+          z: -1.95
+
+    lights:
+      headlight-offsets:
+        # Headlight 1 offset
+        - x: -0.46
+          y: 0.78
+          z: 1.72
+        # Headlight 2 offset
+        - x: 0.46
+          y: 0.78
+          z: 1.72
+      # Light range
+      range: 12.0
+      # Light level (1..15)
+      level: 15
+      # Light update interval (ticks)
+      update-ticks: 2
+      # Enable visible headlight effects
+      visible-effects: false
+
+    exhaust:
+      # Enable exhaust effects
+      enabled: true
+      offsets:
+        # Exhaust point 1
+        - x: -0.34
+          y: 0.48
+          z: -1.95
+        # Exhaust point 2
+        - x: 0.34
+          y: 0.48
+          z: -1.95
+      # Exhaust update interval
+      update-ticks: 2
+      # Minimum throttle for exhaust
+      min-throttle: 0.12
+      # Speed-based exhaust scaling
+      speed-factor: 0.14
+      # Base particle count
+      base-count: 1
+      # Max particle count
+      max-count: 8
+
+    trunk:
+      # Trunk size (must be multiple of 9)
+      slots: 18
+      point-offset:
+        # Trunk interaction point X
+        x: 0.0
+        # Trunk interaction point Y
+        y: 0.95
+        # Trunk interaction point Z
+        z: -2.05
+
+    fuel:
+      point-offset:
+        # Fuel interaction point X
+        x: 0.0
+        # Fuel interaction point Y
+        y: 0.60
+        # Fuel interaction point Z
+        z: -1.95
+
+performance:
+  car:
+    suspension:
+      # Suspension rest length
+      rest-length: 0.55
+      # Suspension stiffness
+      stiffness: 21000.0
+      # Suspension damping
+      damping: 2100.0
+      # Wheel radius for physics
+      wheel-radius: 0.36
+      # Step climb height
+      step-height: 1.0
+
+    drivetrain:
+      # Engine force
+      engine-force: 9700.0
+      # Forward acceleration multiplier
+      acceleration-forward: 1.0
+      # Reverse acceleration multiplier
+      acceleration-reverse-multiplier: 0.58
+      # Throttle curve exponent
+      acceleration-curve-exponent: 1.0
+      # Brake force
+      brake-force: 15000.0
+      # Brake multiplier
+      brake-multiplier: 1.0
+      # Max forward speed (m/s)
+      max-forward-speed: 34.0
+      # Max reverse speed (m/s)
+      max-reverse-speed: 9.5
+
+    steering:
+      # Maximum steering angle
+      max-steer-deg: 28.0
+      # Wheel base length
+      wheel-base: 2.65
+      # Steering response speed
+      steer-response: 0.20
+      # Body roll limit
+      body-roll-limit-deg: 40.0
+      # Body roll response speed
+      body-roll-response: 0.12
+      # Body roll strength
+      body-roll-strength: 1.35
+
+    physics:
+      # Vehicle mass
+      mass: 1250.0
+      # Aerodynamic drag coefficient
+      drag-coeff: 0.018
+      # Rolling resistance
+      rolling-resistance: 55.0
+      # Vertical damping
+      vertical-damping: 3.8
+      # Ground lateral grip
+      lateral-grip-ground: 5.4
+      # Air lateral grip
+      lateral-grip-air: 0.9
+      # Max horizontal delta-v per tick
+      max-tick-horizontal-delta-v: 0.74
+
+    fuel:
+      # Tank capacity in liters
+      tank-capacity: 60.0
+      # Initial fuel on spawn
+      initial-fuel: 35.0
+      consumption:
+        # Base fuel use per tick
+        base-per-tick: 0.0008
+        # Extra fuel use from speed
+        speed-factor: 0.00020
+        # Extra fuel use from throttle
+        throttle-factor: 0.00120
+
+behavior:
+  car:
+    horn:
+      # Enable horn
+      enabled: true
+      # Require movement to use horn
+      require-moving: true
+      # Horn cooldown in ticks
+      cooldown-ticks: 24
+      # Horn sound key
+      sound: ENTITY_GOAT_HORN_SOUND_0
+      # Horn volume
+      volume: 1.35
+      # Horn pitch
+      pitch: 0.75
+
+    collision:
+      # Collision half width
+      half-width: 0.95
+      # Collision half length
+      half-length: 1.40
+      # Collision height
+      height: 1.45
+      # Collision base Y
+      base-y: 0.32
+      # Slide factor on collisions
+      slide-factor: 0.92
+      # Wall impact damping
+      wall-damping: 0.90
+      # Max lift for unstuck logic
+      unstuck-max-lift: 1.2
+
+    health:
+      # Max HP
+      max: 1000.0
+      # HP threshold to disable engine
+      engine-disabled-health-percent: 0.10
+      # Destroy car at 0 HP
+      destroy-on-zero: true
+      # Passive damage per tick
+      idle-damage-per-tick: 0.0
+
+      impact:
+        # Min impact speed delta for damage
+        min-delta-speed: 4.0
+        # Impact damage scale
+        damage-scale: 12.0
+        # Wall impact multiplier
+        wall-multiplier: 1.15
+
+      regen:
+        # Enable HP regen
+        enabled: true
+        # HP regen per tick
+        per-tick: 0.20
+        # Delay before regen starts
+        delay-ticks: 80
+
+    damage:
+      # Enable part-based damage system
+      enabled: true
+
+      parts:
+        front:
+          # Enable front part damage
+          enabled: true
+          # Front part HP
+          max-health: 350.0
+        rear:
+          # Enable rear part damage
+          enabled: true
+          # Rear part HP
+          max-health: 300.0
+        wheels:
+          # Enable wheel part damage
+          enabled: true
+          # Wheel HP
+          max-health: 120.0
+
+      impact:
+        # Front impact multiplier
+        front-multiplier: 1.20
+        # Rear impact multiplier
+        rear-multiplier: 1.00
+        # Wheel impact multiplier
+        wheel-multiplier: 0.45
+
+      performance:
+        # HP threshold where slowdown starts
+        slowdown-start-percent: 0.35
+        # Minimum power factor at zero HP
+        min-factor-at-zero: 0.35
+
+      visual:
+        # Smoke threshold
+        smoke-threshold-percent: 0.20
+
+      hitbox:
+        front-offset:
+          # Front damage hitbox offset X
+          x: 0.0
+          # Front damage hitbox offset Y
+          y: 0.75
+          # Front damage hitbox offset Z
+          z: 1.95
+        rear-offset:
+          # Rear damage hitbox offset X
+          x: 0.0
+          # Rear damage hitbox offset Y
+          y: 0.75
+          # Rear damage hitbox offset Z
+          z: -2.05
+
+    combat:
+      ram:
+        # Enable ram damage
+        enabled: true
+        # Minimum ram speed
+        min-speed: 7.0
+        # Base ram damage
+        base-damage: 2.0
+        # Ram damage scaling by speed
+        speed-damage-factor: 0.55
+        # Maximum ram damage
+        max-damage: 20.0
+        # Horizontal knockback on ram
+        knockback-horizontal: 1.15
+        # Vertical knockback on ram
+        knockback-vertical: 0.25
+        # Re-hit cooldown per target
+        hit-cooldown-ticks: 10
+        # Affect players with ram
+        affect-players: false
+        # Affect mobs with ram
+        affect-mobs: true
+        # Self speed loss after ram
+        self-speed-loss-factor: 0.92
+
+    fuel:
+      # Slowdown factor when out of fuel
+      no-fuel-brake-factor: 0.93
+      # Refuel rate (liters per tick)
+      refuel-rate-liters-per-tick: 0.10
+      # Refuel sound interval
+      refuel-sound-interval-ticks: 6
+
+localization:
+  car:
+    menu:
+      localization:
+        en:
+          # Car menu title (EN)
+          title: "&8Car Menu"
+          # Engine ON label (EN)
+          engine-on: "&aEngine: ON"
+          # Engine OFF label (EN)
+          engine-off: "&cEngine: OFF"
+          # Lights ON label (EN)
+          lights-on: "&eHeadlights: ON"
+          # Lights OFF label (EN)
+          lights-off: "&7Headlights: OFF"
+          # Trunk button label (EN)
+          trunk: "&6Open trunk"
+          # Toggle hint (EN)
+          toggle-hint: "&7Click to toggle"
+          # Trunk hint (EN)
+          trunk-hint: "&7Open trunk"
+        ru:
+          # Car menu title (RU)
+          title: "&8Меню машины"
+          # Engine ON label (RU)
+          engine-on: "&aДвигатель: ВКЛ"
+          # Engine OFF label (RU)
+          engine-off: "&cДвигатель: ВЫКЛ"
+          # Lights ON label (RU)
+          lights-on: "&eФары: ВКЛ"
+          # Lights OFF label (RU)
+          lights-off: "&7Фары: ВЫКЛ"
+          # Trunk button label (RU)
+          trunk: "&6Открыть багажник"
+          # Toggle hint (RU)
+          toggle-hint: "&7Нажмите, чтобы переключить"
+          # Trunk hint (RU)
+          trunk-hint: "&7Открыть багажник"
+
+    trunk:
+      # Use lang key for trunk title
+      use-lang-title: true
+      # Lang key for trunk title
+      title-lang-key: trunk.title
+      # Fallback title
+      title: "Trunk"
+      localization:
+        en:
+          # Trunk title EN
+          title: "&8Trunk"
+        ru:
+          # Trunk title RU
+          title: "&8Багажник"

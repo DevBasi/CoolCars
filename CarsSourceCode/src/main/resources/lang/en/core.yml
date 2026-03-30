@@ -1,0 +1,36 @@
+﻿prefix: "&8[&6Cars&8] &7"
+
+command.only-player: "{0}Only players can use this command."
+command.no-permission: "{0}&cYou do not have permission to do this."
+
+spawn.success: "{0}&aCar spawned: &f{1}&a."
+spawn.mount-failed: "{0}&cFailed to mount driver seat."
+spawn.unknown-model: "{0}&cUnknown car model: &f{1}"
+spawn.available-models: "{0}&eAvailable models: &f{1}"
+
+seat.no-free: "{0}&cNo free seats in this car."
+seat.enter-failed: "{0}&cFailed to enter car."
+seat.driver: "{0}&aYou are now the driver."
+seat.passenger: "{0}&aYou entered passenger seat."
+
+trunk.too-far: "{0}&cToo far from trunk."
+
+fuel.hold-shift: "{0}&eHold SHIFT and right-click to refuel."
+fuel.need-canister: "{0}&cHold a fuel canister in your main hand."
+fuel.canister-empty: "{0}&cYour canister is empty."
+fuel.tank-full: "{0}&eTank is already full."
+fuel.started: "{0}&aRefueling started. Hold SHIFT to continue..."
+fuel.stopped-release: "{0}&eRefuel stopped: release detected."
+fuel.too-far: "{0}&cToo far from fuel point."
+fuel.stopped-no-can: "{0}&cRefuel stopped: no canister in hand."
+fuel.complete: "{0}&aRefueling complete."
+
+repair.disabled: "{0}&cAdvanced car damage is disabled in config."
+repair.need-kit: "{0}&cHold a repair kit in your main hand."
+repair.kit-empty: "{0}&cYour repair kit is empty."
+repair.part-full: "{0}&e{1} is already fully repaired."
+repair.started: "{0}&aRepair started: &f{1}&a. Hold SHIFT to continue..."
+repair.stopped-release: "{0}&eRepair stopped: release detected."
+repair.too-far: "{0}&cToo far from target part."
+repair.stopped-no-kit: "{0}&cRepair stopped: no repair kit in hand."
+repair.complete: "{0}&aRepair complete: &f{1}"

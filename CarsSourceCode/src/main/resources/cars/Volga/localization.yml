@@ -1,0 +1,31 @@
+car:
+  menu:
+    localization:
+      en:
+        title: "&8Car Menu"
+        engine-on: "&aEngine: ON"
+        engine-off: "&cEngine: OFF"
+        lights-on: "&eHeadlights: ON"
+        lights-off: "&7Headlights: OFF"
+        trunk: "&6Open trunk"
+        toggle-hint: "&7Click to toggle"
+        trunk-hint: "&7Open trunk"
+      ru:
+        title: "&8Меню автомобиля"
+        engine-on: "&aДвигатель: включен"
+        engine-off: "&cДвигатель: выключен"
+        lights-on: "&eФары: включены"
+        lights-off: "&7Фары: выключены"
+        trunk: "&6Багажник"
+        toggle-hint: "&7Нажмите, чтобы переключить"
+        trunk-hint: "&7Открыть багажник"
+
+  trunk:
+    use-lang-title: true
+    title-lang-key: menu.trunk.title
+    title: "Trunk"
+    localization:
+      en:
+        title: "&8Trunk"
+      ru:
+        title: "&8Багажник автомобиля"
