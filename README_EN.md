@@ -1,51 +1,62 @@
 <div align="center">
   <img src="https://mintcdn.com/coolcars/Nf4BiqjFcs6SEFCk/images/coolcars/logo-full.png?w=1100&fit=max&auto=format&n=Nf4BiqjFcs6SEFCk&q=85&s=519a7b4c36beba6e8c42eca5b5685fd6" width="800" alt="CoolCars Logo">
-  <h1>CoolCars — Minecraft Vehicle System</h1>
+  <h1>CoolCars — Vehicle System for Minecraft</h1>
   
   <p align="center">
     <b>Advanced physics, modular customization, and high performance.</b>
   </p>
 
-  [![Minecraft Version](https://img.shields.io/badge/Minecraft%201.21+-62B06F?style=for-the-badge&logo=minecraft&logoColor=white)](https://www.minecraft.net/)
-  [![Platform](https://img.shields.io/badge/Paper%20/%20Bukkit-3498DB?style=for-the-badge&logo=spigotmc&logoColor=white)](https://papermc.io/)
-  [![Wiki](https://img.shields.io/badge/Wiki-95A5A6?style=for-the-badge&logo=wikipedia&logoColor=white)](https://coolcars.mintlify.app/en/README)
+  [![Minecraft Version](https://img.shields.io/badge/Minecraft-1.21+-62B06F?style=for-the-badge&logo=minecraft&logoColor=white)](https://www.minecraft.net/)
+  [![Java Version](https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
+  [![Wiki](https://img.shields.io/badge/Wiki-Documentation-95A5A6?style=for-the-badge&logo=gitbook&logoColor=white)](https://coolcars.mintlify.app/ru/README)
 
   <br />
 
-  [🇷🇺 **Russian**](README.md) | [🇺🇸 **English**]
+  [🇺🇸 **English**] | [🇷🇺 **Русский**](README_RU.md)
 </div>
 
 ---
 
-## Overview
+## ⚙️ System Requirements
 
-**CoolCars** is a comprehensive solution for implementing vehicle systems on Minecraft servers. The plugin is designed with a focus on deep customization and performance, enabling the creation of unique car models with realistic behavior.
+* **Server Version:** Minecraft **1.21** or higher (Paper, Purpur).
+* **Runtime Environment:** **Java 21** or higher.
+* **Dependencies:** [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/) (Required).
 
-## Key Features
+---
 
-*   **Physics Engine:** Custom movement simulation including acceleration, inertia, surface grip, and suspension handling.
-*   **Flexible Configuration:** YAML-based setup allows linking 3D models (CustomModelData), defining unique sounds, and technical specifications for each vehicle.
-*   **Core Systems:** Built-in mechanics for fuel, durability, repairs, trunks, and key-based access control.
-*   **User Interface:** Real-time vehicle status (speed, fuel) displayed in the Action Bar and functional GUI menus.
-*   **Optimization:** Minimal impact on server Tick Rate, even with a high number of active vehicles.
+## 🚀 Core Features
 
-## Installation
+### 🏎 Physics & Movement
+* **Inertia Simulation:** Calculated acceleration, braking, and coasting mechanics.
+* **Terrain Handling:** Smooth movement over slabs, stairs, and slopes.
+* **Collision System:** Intelligent block and entity collision detection.
+* **Suspension:** Visual chassis tilt animation during maneuvers.
 
-1. Place `CoolCars.jar` into your `plugins` folder.
-2. Restart the server to generate configuration files.
-3. Verify the installation using the `/car spawn volga` command.
+### 🎨 Customization (YAML)
+* **3D Model Support:** Easy `CustomModelData` integration from your resource pack.
+* **Technical Tuning:** Individual max speed, acceleration, and fuel capacity settings for each model.
+* **Sound Engine:** Support for custom engine start, driving, and signal sounds.
 
-## Commands
+### 🎮 Gameplay Mechanics
+* **Fuel System:** Configurable consumption and refueling system.
+* **Access Control:** Key Item system to lock/unlock vehicles and prevent theft.
+* **Storage:** Integrated trunk (inventory) for every vehicle.
+* **Dynamic HUD:** Real-time speedometer and fuel level display in the Action Bar.
 
-| Command | Description |
-| :--- | :--- |
-| `/car spawn <model>` | Spawn a vehicle of the selected model. |
-| `/car givekey <player> <model>` | Give a vehicle key to a player. |
-| `/car reload` | Reload the plugin configuration. |
-| `/car list` | View the list of available models. |
+---
+
+## ⌨️ Commands & Permissions
+
+| Command | Description | Permission |
+| :--- | :--- | :--- |
+| `/car spawn <model>` | Spawn a vehicle of the selected model | `coolcars.admin.spawn` |
+| `/car givekey <player> <model>` | Give a vehicle key to a player | `coolcars.admin.givekey` |
+| `/car list` | View all available vehicle models | `coolcars.player.list` |
+| `/car reload` | Reload configuration files | `coolcars.admin.reload` |
 
 ---
 
 <div align="center">
-  <sub>Designed for professional Minecraft servers</sub>
+  <sub>Developed by <b>BasiDev</b> for modern Minecraft networks.</sub>
 </div>
