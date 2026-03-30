@@ -55,6 +55,12 @@
 
 ---
 
+## 🐛 Bug Reports
+
+If you encounter any bugs or technical issues, please report them directly via Discord DM: **devbasi**
+
+---
+
 ## ⌨️ Commands & Permissions
 
 | Command | Description | Permission |
