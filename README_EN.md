@@ -25,6 +25,15 @@
 
 ---
 
+## 📥 Installation
+
+1. Install the latest version of **ProtocolLib**.
+2. Drop `CoolCars-1.0.0.jar` into your server's `plugins/` folder.
+3. Restart the server to generate configuration files.
+4. Ensure your server resource pack is active to see 3D models.
+
+---
+
 ## 🚀 Core Features
 
 ### 🏎 Physics & Movement
@@ -58,5 +67,5 @@
 ---
 
 <div align="center">
-  <sub>Developed by <b>BasiDev</b> for modern Minecraft networks.</sub>
+  <sub>Developed by <b>PenguinTeam & BasiDev</b> for modern Minecraft networks.</sub>
 </div>
