@@ -1,0 +1,64 @@
+# Справочник по конфигу CoolCars (RU)
+# Этот файл только для документации и не читается плагином автоматически.
+# Основной рабочий конфиг: config.yml
+
+keys:
+  # Главный переключатель системы ключей машин.
+  enabled: true
+
+  # Если true, запуск двигателя проверяется по правилам ключей ниже.
+  require-key-to-start-engine: true
+
+  # Если true, для выключения двигателя тоже нужен подходящий ключ в инвентаре.
+  require-key-to-stop-engine: true
+
+  # Если true, владелец может завести свою машину без ключа в инвентаре.
+  allow-owner-start-without-key: true
+
+  # Если true, не-владелец сможет завести машину при наличии подходящего ключа.
+  allow-non-owner-use-key: false
+
+  # Если true, поиск ключа идет по всему инвентарю.
+  # Если false, проверяются только main hand и off-hand.
+  check-entire-inventory: true
+
+  item:
+    # Материал предмета ключа (/cars key give <игрок> <uuid-машины>).
+    material: TRIPWIRE_HOOK
+
+    # Поддерживаемые плейсхолдеры:
+    # {model} {model_key} {car_uuid} {owner_name} {owner_uuid}
+    name: "&6Ключ от {model}"
+
+    # В lore поддерживаются те же плейсхолдеры, что и в имени.
+    lore:
+      - "&7Машина: &f{model}"
+      - "&7UUID: &f{car_uuid}"
+      - "&7Владелец: &f{owner_name}"
+
+    # Необязательные переопределения по языку (интеграция с lang-системой).
+    localized:
+      en:
+        name: "&6Key for {model}"
+        lore:
+          - "&7Vehicle: &f{model}"
+          - "&7UUID: &f{car_uuid}"
+          - "&7Owner: &f{owner_name}"
+      ru:
+        name: "&6Ключ от {model}"
+        lore:
+          - "&7Машина: &f{model}"
+          - "&7UUID: &f{car_uuid}"
+          - "&7Владелец: &f{owner_name}"
+
+    # Укажите null или удалите строку, чтобы отключить custom model data.
+    custom-model-data: null
+
+    # Делает предмет ключа неразрушаемым.
+    unbreakable: true
+
+sounds:
+  events:
+    landing:
+      # Ключ звука, который играет при жестком приземлении после падения.
+      key: "coolcars.landing"

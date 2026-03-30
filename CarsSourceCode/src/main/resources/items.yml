@@ -1,0 +1,49 @@
+﻿fuel:
+  canister:
+    material: HONEY_BOTTLE
+    capacity-liters: 10.0
+    custom-model-data: 1
+    display-name: "&6Fuel Canister &7({liters}/{capacity}L)"
+    lore:
+      - "&7Fuel: &f{liters}&7/&f{capacity}&7 L"
+      - "&8SHIFT + RMB on fuel point"
+    localization:
+      en:
+        display-name: "&6Fuel Canister &7({liters}/{capacity}L)"
+        lore:
+          - "&7Fuel: &f{liters}&7/&f{capacity}&7 L"
+          - "&8SHIFT + RMB on fuel point"
+      ru:
+        display-name: "&6Канистра с топливом &7({liters}/{capacity} л)"
+        lore:
+          - "&7Топливо: &f{liters}&7/&f{capacity}&7 л"
+          - "&8SHIFT + ПКМ по точке заправки"
+    unbreakable: false
+    nbt-tags:
+      "cars:canister_type": standard
+      "cars:refuel_item": true
+
+repair:
+  rate-units-per-tick: 0.08
+  kit:
+    material: RABBIT_HIDE
+    max-units: 10.0
+    custom-model-data: 1
+    display-name: "&bRepair Kit &7({units}/{capacity})"
+    lore:
+      - "&7Kit units: &f{units}&7/&f{capacity}"
+      - "&8SHIFT + RMB on damaged part"
+    localization:
+      en:
+        display-name: "&bRepair Kit &7({units}/{capacity})"
+        lore:
+          - "&7Kit units: &f{units}&7/&f{capacity}"
+          - "&8SHIFT + RMB on damaged part"
+      ru:
+        display-name: "&bРемкомплект &7({units}/{capacity})"
+        lore:
+          - "&7Единицы: &f{units}&7/&f{capacity}"
+          - "&8SHIFT + ПКМ по поврежденной части"
+    unbreakable: false
+    nbt-tags:
+      "cars:repair_item": true

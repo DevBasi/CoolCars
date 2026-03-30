@@ -1,0 +1,213 @@
+sounds:
+  enabled: true
+  category: PLAYERS
+  # Continuous engine sounds are emitted from car world position (not player),
+  # so nearby players hear car movement/idle/repair/refuel naturally by distance.
+  transition:
+    driving-to-idle-delay-ticks: 2
+    idle-to-driving-delay-ticks: 2
+  spatial:
+    # Floor loudness at max radius (0.0-0.95). Lower = more natural fade.
+    min-volume-factor: 0.16
+    # Full-volume bubble around vehicle before fade starts.
+    near-distance-blocks: 2.0
+    # Falloff curve power (>1 = faster fade with distance, <1 = slower fade).
+    falloff-curve-power: 1.25
+
+  events:
+    seat-open:
+      enabled: true
+      key: "coolcars.open"
+      volume: 1.00
+      pitch: 1.00
+      radius: 18.0
+      interval-ticks: 6
+      min-speed: 0.0
+      drift-threshold: 0.0
+      min-slip-speed: 0.0
+      min-steer: 0.0
+      cooldown-ticks: 0
+      require-moving: false
+      prevent-overlap: true
+
+    seat-close:
+      enabled: true
+      key: "coolcars.close"
+      volume: 0.95
+      pitch: 1.00
+      radius: 18.0
+      interval-ticks: 6
+      min-speed: 0.0
+      drift-threshold: 0.0
+      min-slip-speed: 0.0
+      min-steer: 0.0
+      cooldown-ticks: 0
+      require-moving: false
+      prevent-overlap: true
+
+    engine-start:
+      enabled: true
+      key: "coolcars.start"
+      volume: 1.05
+      pitch: 1.00
+      radius: 20.0
+      interval-ticks: 1
+      min-speed: 0.0
+      drift-threshold: 0.0
+      min-slip-speed: 0.0
+      min-steer: 0.0
+      cooldown-ticks: 0
+      require-moving: false
+      prevent-overlap: true
+
+    engine-stop:
+      enabled: true
+      key: "coolcars.stop"
+      volume: 1.00
+      pitch: 1.00
+      radius: 18.0
+      interval-ticks: 1
+      min-speed: 0.0
+      drift-threshold: 0.0
+      min-slip-speed: 0.0
+      min-steer: 0.0
+      cooldown-ticks: 0
+      require-moving: false
+      prevent-overlap: true
+
+    engine-idle:
+      enabled: true
+      key: "coolcars.idle"
+      volume: 0.64
+      pitch: 1.00
+      radius: 24.0
+      interval-ticks: 55
+      min-speed: 0.0
+      drift-threshold: 0.0
+      min-slip-speed: 0.0
+      min-steer: 0.0
+      cooldown-ticks: 0
+      require-moving: false
+      prevent-overlap: true
+
+    horn:
+      enabled: true
+      key: "coolcars.horn"
+      volume: 1.25
+      pitch: 1.00
+      radius: 36.0
+      interval-ticks: 1
+      min-speed: 0.0
+      drift-threshold: 0.0
+      min-slip-speed: 0.0
+      min-steer: 0.0
+      cooldown-ticks: 24
+      require-moving: false
+      prevent-overlap: true
+
+    driving:
+      enabled: true
+      key: "coolcars.driving"
+      volume: 0.70
+      pitch: 0.98
+      radius: 28.0
+      interval-ticks: 120
+      min-speed: 5.6
+      drift-threshold: 0.0
+      min-slip-speed: 0.0
+      min-steer: 0.0
+      cooldown-ticks: 0
+      require-moving: false
+      prevent-overlap: true
+
+    glovebox:
+      enabled: true
+      key: "coolcars.glovebox"
+      volume: 0.90
+      pitch: 1.00
+      radius: 14.0
+      interval-ticks: 6
+      min-speed: 0.0
+      drift-threshold: 0.0
+      min-slip-speed: 0.0
+      min-steer: 0.0
+      cooldown-ticks: 0
+      require-moving: false
+      prevent-overlap: true
+
+    filling:
+      enabled: true
+      key: "coolcars.filling"
+      volume: 0.95
+      pitch: 1.00
+      radius: 22.0
+      interval-ticks: 8
+      min-speed: 0.0
+      drift-threshold: 0.0
+      min-slip-speed: 0.0
+      min-steer: 0.0
+      cooldown-ticks: 0
+      require-moving: false
+      prevent-overlap: true
+
+    repair:
+      enabled: true
+      key: "coolcars.repair"
+      volume: 0.92
+      pitch: 1.00
+      radius: 22.0
+      interval-ticks: 8
+      min-speed: 0.0
+      drift-threshold: 0.0
+      min-slip-speed: 0.0
+      min-steer: 0.0
+      cooldown-ticks: 0
+      require-moving: false
+      prevent-overlap: true
+
+    hit:
+      enabled: true
+      key: "coolcars.hit"
+      volume: 1.10
+      pitch: 1.00
+      radius: 28.0
+      interval-ticks: 6
+      min-speed: 4.0
+      drift-threshold: 0.0
+      min-slip-speed: 0.0
+      min-steer: 0.0
+      cooldown-ticks: 8
+      require-moving: false
+      prevent-overlap: true
+
+    crash:
+      enabled: true
+      key: "coolcars.crash"
+      volume: 1.25
+      pitch: 1.00
+      radius: 34.0
+      interval-ticks: 12
+      min-speed: 10.0
+      drift-threshold: 0.0
+      min-slip-speed: 0.0
+      min-steer: 0.0
+      cooldown-ticks: 18
+      require-moving: false
+      prevent-overlap: true
+
+    landing:
+      enabled: true
+      # EN: Sound key played on hard landing (fall impact).
+      # RU: Звук, который играет при жёстком приземлении (удар после падения).
+      key: "coolcars.landing"
+      volume: 1.15
+      pitch: 0.95
+      radius: 26.0
+      interval-ticks: 8
+      min-speed: 4.0
+      drift-threshold: 0.0
+      min-slip-speed: 0.0
+      min-steer: 0.0
+      cooldown-ticks: 8
+      require-moving: false
+      prevent-overlap: true

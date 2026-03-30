@@ -1,0 +1,174 @@
+﻿car:
+  horn:
+    enabled: true
+    require-moving: true
+    cooldown-ticks: 24
+    sound: ENTITY_GOAT_HORN_SOUND_0
+    volume: 1.35
+    pitch: 0.75
+
+  collision:
+    half-width: 0.95
+    half-length: 1.40
+    height: 1.45
+    base-y: 0.32
+    slide-factor: 0.92
+    wall-damping: 0.90
+    unstuck-max-lift: 1.2
+    unstuck-horizontal-nudge: 0.28
+    unstuck-horizontal-attempts: 6
+    stuck-velocity-damping: 0.82
+
+  health:
+    max: 1000.0
+    engine-disabled-health-percent: 0.10
+    destroy-on-zero: true
+    idle-damage-per-tick: 0.0
+
+    impact:
+      min-delta-speed: 4.0
+      damage-scale: 12.0
+      wall-multiplier: 1.15
+
+    landing:
+      enabled: true
+      min-impact-speed: 6.5
+      damage-scale: 22.0
+      wheel-damage-multiplier: 1.15
+      body-damage-multiplier: 0.55
+      # Safety cap for formula-based landing damage.
+      max-total-damage: 180.0
+
+      # If true, damage can be defined by fall height ranges below.
+      # Height is estimated in blocks from impact speed.
+      use-height-ranges: true
+      # If true and no range matches current height, no landing damage is applied.
+      # If false, formula damage is used as fallback.
+      range-require-match: false
+      # Per-range damage profile:
+      # - min-height/max-height : inclusive fall height range (blocks)
+      # - front/rear/wheel/core-damage : flat HP damage
+      # - front/rear/wheel/core-percent : additional percent damage from max HP
+      height-ranges:
+        - min-height: 3.0
+          max-height: 5.9
+          front-damage: 8.0
+          rear-damage: 6.0
+          wheel-damage: 7.0
+          core-damage: 0.0
+          front-percent: 0.0
+          rear-percent: 0.0
+          wheel-percent: 0.0
+          core-percent: 0.0
+        - min-height: 6.0
+          max-height: 9.9
+          front-damage: 18.0
+          rear-damage: 14.0
+          wheel-damage: 16.0
+          core-damage: 4.0
+          front-percent: 0.0
+          rear-percent: 0.0
+          wheel-percent: 0.0
+          core-percent: 0.0
+        - min-height: 10.0
+          max-height: 255.0
+          front-damage: 32.0
+          rear-damage: 26.0
+          wheel-damage: 30.0
+          core-damage: 10.0
+          front-percent: 0.0
+          rear-percent: 0.0
+          wheel-percent: 0.0
+          core-percent: 0.0
+
+    regen:
+      enabled: true
+      per-tick: 0.20
+      delay-ticks: 80
+
+    system:
+      # Modes: car_only | parts_only | car_and_parts
+      mode: parts_only
+      # Used only for car_and_parts mode.
+      combined-core-damage-share: 0.50
+      # Stop movement if core HP reaches 0.
+      stop-on-car-health-zero: true
+      # Stop movement if any enabled part HP reaches 0.
+      stop-on-any-part-zero: true
+      # Show smoke when immobilized by HP rules.
+      smoke-when-immobilized: true
+
+  damage:
+    enabled: true
+
+    parts:
+      front:
+        enabled: true
+        max-health: 350.0
+      rear:
+        enabled: true
+        max-health: 300.0
+      wheels:
+        enabled: true
+        max-health: 120.0
+
+    impact:
+      front-multiplier: 1.20
+      rear-multiplier: 1.00
+      wheel-multiplier: 0.45
+
+    performance:
+      slowdown-start-percent: 0.35
+      min-factor-at-zero: 0.35
+
+    visual:
+      smoke-threshold-percent: 0.20
+
+    hitbox:
+      front-offset:
+        x: 0.0
+        y: 0.75
+        z: 1.95
+      rear-offset:
+        x: 0.0
+        y: 0.75
+        z: -2.05
+
+  combat:
+    ram:
+      enabled: true
+      min-speed: 7.0
+      base-damage: 2.0
+      speed-damage-factor: 0.55
+      max-damage: 20.0
+      knockback-horizontal: 1.15
+      knockback-vertical: 0.25
+      hit-cooldown-ticks: 10
+      affect-players: false
+      affect-mobs: true
+      self-speed-loss-factor: 0.92
+
+    vehicle-damage:
+      melee:
+        enabled: true
+        multiplier: 1.0
+        play-hit-sound: true
+
+      projectiles:
+        enabled: true
+        stick-arrows: true
+        ignore-car-occupants: true
+        notify-shooter: true
+        notify-driver: true
+        notify-friendly-blocked: true
+        play-hit-sound: true
+        base-damage: 5.0
+        arrow-multiplier: 1.0
+        trident-multiplier: 1.4
+        other-multiplier: 0.85
+        speed-damage-factor: 0.55
+
+  fuel:
+    no-fuel-brake-factor: 0.93
+    refuel-rate-liters-per-tick: 0.10
+    refuel-sound-interval-ticks: 6

@@ -1,0 +1,20 @@
+﻿name: CoolCars
+version: "${project.version}"
+author: basi
+main: dev.basi.cars.MainCars
+api-version: "1.21"
+softdepend: [PlaceholderAPI]
+commands:
+  fuel:
+    description: Fuel canister and refuel commands
+    usage: /fuel give [liters] | /fuel set <liters>
+  repair:
+    description: Repair kit and repair commands
+    usage: /repair give [units] | /repair set <units>
+  car:
+    description: Car management commands
+    usage: /car help | /car spawn <model> | /car info <uuid> | /car list | /car remove <uuid> | /car tp <uuid> <player> | /car key give <player> <uuid> | /car reload | /car repairhitbox <on|off>
+    aliases: [cars]
+  lang:
+    description: Manage plugin language (personal and server default)
+    usage: /lang set <en|ru> | /lang auto | /lang server <en|ru> | /lang

@@ -1,0 +1,129 @@
+﻿config-version: 4
+
+cars:
+  default-model: volga
+
+ui:
+  action-bar:
+    enabled: true
+    update-ticks: 2
+    car:
+      enabled: true
+      update-ticks: 2
+      # Placeholders:
+      # {model} {model_key} {speed_label} {speed_kmh} {speed_mps}
+      # {passengers_label} {passengers}/{passengers_max} {occupied_seats}/{total_seats}
+      # {hp_label} {hp}/{hp_max} {hp_percent} {hp_bar}
+      # {fuel_label} {fuel}/{fuel_max} {fuel_percent} {fuel_bar}
+      # {engine} {lights} {damage_block}
+      # Colors for tuning: {seats_color} {hp_color} {fuel_color} {damage_color}
+      format: "&7{speed_label}&b{speed_kmh} &7km/h &8| &7{passengers_label}{seats_color}{passengers}/{passengers_max} &8| &7{hp_label}{hp_color}{hp}/{hp_max} &7{hp_bar} &8| &7{fuel_label}{fuel_color}{fuel}/{fuel_max}L &7({fuel_percent}%) {damage_block}"
+      format-lang-key: "actionbar.car"
+    refuel:
+      enabled: true
+      update-ticks: 2
+      # Placeholders:
+      # {model} {model_key} {refuel_label} {tank_label} {can_label}
+      # {progress_bar} {progress_percent} {tank}/{tank_max}
+      # {canister}/{canister_max} {hold_shift}
+      format: "&6{refuel_label}&e{progress_bar} &7{progress_percent}% &8| &b{tank_label} {tank}/{tank_max}L &8| &a{can_label} {canister}/{canister_max}L{hold_shift}"
+      format-lang-key: "actionbar.refuel"
+    repair:
+      enabled: true
+      update-ticks: 2
+      # Placeholders:
+      # {model} {model_key} {repair_label} {part}
+      # {part_bar} {part_percent} {kit_label} {kit}/{kit_max} {hold_shift}
+      format: "&b{repair_label}&f{part} &a{part_bar} &7{part_percent}% &8| &e{kit_label} {kit}/{kit_max}{hold_shift}"
+      format-lang-key: "actionbar.repair"
+
+language:
+  global: true
+  default: en
+  use-player-locale: false
+
+storage:
+  autosave:
+    enabled: true
+    interval-ticks: 600
+
+database:
+  enabled: true
+  type: sqlite
+  connection-timeout-seconds: 5
+
+  sqlite:
+    file: player-cars.db
+
+  mysql:
+    host: 127.0.0.1
+    port: 3306
+    database: coolcars
+    username: root
+    password: ""
+    params: "useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
+
+  telemetry:
+    # EN: Extended per-car telemetry/state snapshots in database.
+    enabled: true
+    # EN: Hard limits to keep payloads bounded and DB-friendly.
+    max-model-key-length: 96
+    max-model-name-length: 128
+    max-owner-name-length: 64
+    events:
+      # EN: Save event timeline rows (crash, hard_landing, engine toggles, etc.).
+      enabled: true
+      # EN: Max text size for event details and compact damage snapshot text.
+      max-details-length: 1024
+      # EN: Max event type key length.
+      max-type-length: 64
+
+commands:
+  car-heal:
+    # EN: Enable admin command /cars heal <car-uuid> <target> <amount|full>
+    enabled: true
+    # EN: Allow usage from server console.
+    allow-console: true
+
+keys:
+  # EN: Master switch for the car key system.
+  enabled: true
+  # EN: If true, engine start is validated by the key rules below.
+  require-key-to-start-engine: true
+  # EN: If true, engine stop also requires a matching key in inventory.
+  require-key-to-stop-engine: true
+  # EN: Owner can start their own car without carrying a key.
+  allow-owner-start-without-key: true
+  # EN: If true, non-owners may start a car when they have a matching key.
+  allow-non-owner-use-key: false
+  # EN: Search key in full inventory. If false, only main hand/off-hand are checked.
+  check-entire-inventory: true
+
+  item:
+    # EN: Material used for generated key item (/cars key give ...).
+    material: TRIPWIRE_HOOK
+    # EN: Display name placeholders: {model} {model_key} {car_uuid} {owner_name} {owner_uuid}
+    name: "&6Key for {model}"
+    # EN: Lore placeholders are the same as in the key name.
+    lore:
+      - "&7Vehicle: &f{model}"
+      - "&7UUID: &f{car_uuid}"
+      - "&7Owner: &f{owner_name}"
+    # EN: Per-language key name/lore overrides by lang system.
+    localized:
+      en:
+        name: "&6Key for {model}"
+        lore:
+          - "&7Vehicle: &f{model}"
+          - "&7UUID: &f{car_uuid}"
+          - "&7Owner: &f{owner_name}"
+      ru:
+        name: "&6Ключ от {model}"
+        lore:
+          - "&7Машина: &f{model}"
+          - "&7UUID: &f{car_uuid}"
+          - "&7Владелец: &f{owner_name}"
+    # EN: Set null or remove this line to disable custom model data.
+    custom-model-data: null
+    # EN: Make key item unbreakable.
+    unbreakable: true

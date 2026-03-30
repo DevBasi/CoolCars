@@ -1,0 +1,134 @@
+﻿car:
+  meta:
+    display-name: Volga
+
+  models:
+    body-material: IRON_INGOT
+    body-custom-model-data: 1
+    body-material-headlights: IRON_INGOT
+    body-material-headlights-custom-model-data: 1
+    wheel-material: IRON_INGOT
+    wheel-custom-model-data: 2
+    wheels:
+      default: IRON_INGOT
+      default-custom-model-data: 2
+      front-left: IRON_INGOT
+      front-left-custom-model-data: 2
+      front-right: IRON_INGOT
+      front-right-custom-model-data: 2
+      rear-left: IRON_INGOT
+      rear-left-custom-model-data: 2
+      rear-right: IRON_INGOT
+      rear-right-custom-model-data: 2
+    steering-wheel-material: IRON_INGOT
+    steering-wheel-custom-model-data: 3
+
+  menu:
+    rows: 3
+    trunk-button-enabled: true
+    slots:
+      engine: 11
+      trunk: 13
+      lights: 15
+    style:
+      fill-empty-slots: true
+      filler:
+        material: BLACK_STAINED_GLASS_PANE
+        name: "&8 "
+      items:
+        engine:
+          material-on: LIME_DYE
+          material-off: RED_DYE
+        lights:
+          material-on: GLOWSTONE_DUST
+          material-off: COAL
+        trunk:
+          material: CHEST
+
+  interaction:
+    hitbox-width: 2.3
+    hitbox-height: 1.8
+
+  seats:
+    offsets:
+      - x: 0.70
+        y: -0.10
+        z: 0.45
+      - x: -0.55
+        y: -0.10
+        z: 0.54
+      - x: -0.50
+        y: -0.10
+        z: -0.62
+      - x: 0.80
+        y: -0.10
+        z: -0.62
+
+  visual:
+    interpolation-duration: 2
+    teleport-duration: 2
+
+    body-offset:
+      x: 0.0
+      y: 1.05
+      z: 0.0
+
+    steering-wheel-offset:
+      x: 0.75
+      y: 1.30
+      z: 0.92
+
+    wheel-offsets:
+      - x: -1.20
+        y: 0.50
+        z: 2.40
+      - x: 1.20
+        y: 0.50
+        z: 2.40
+      - x: -1.20
+        y: 0.50
+        z: -1.95
+      - x: 1.20
+        y: 0.50
+        z: -1.95
+
+  lights:
+    headlight-offsets:
+      - x: -0.46
+        y: 0.78
+        z: 1.72
+      - x: 0.46
+        y: 0.78
+        z: 1.72
+    range: 12.0
+    level: 15
+    update-ticks: 2
+    visible-effects: false
+
+  exhaust:
+    enabled: true
+    offsets:
+      - x: -0.34
+        y: 0.48
+        z: -1.95
+      - x: 0.34
+        y: 0.48
+        z: -1.95
+    update-ticks: 2
+    min-throttle: 0.12
+    speed-factor: 0.14
+    base-count: 1
+    max-count: 8
+
+  trunk:
+    slots: 18
+    point-offset:
+      x: 0.0
+      y: 0.95
+      z: -2.05
+
+  fuel:
+    point-offset:
+      x: 0.0
+      y: 0.60
+      z: -1.95

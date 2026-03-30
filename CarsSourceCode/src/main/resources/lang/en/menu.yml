@@ -1,0 +1,13 @@
+# Car menu item names (lang/en/menu.yml)
+menu.car.title: "&8Car Menu"
+menu.car.engine.on: "&aEngine: ON"
+menu.car.engine.off: "&cEngine: OFF"
+menu.car.lights.on: "&eHeadlights: ON"
+menu.car.lights.off: "&7Headlights: OFF"
+# Trunk button name in menu (first line in tooltip)
+menu.car.trunk: "&6Open trunk"
+# Trunk button hint (second line)
+menu.car.trunk.hint: "&7Open trunk"
+menu.car.toggle.hint: "&7Click to toggle"
+# Trunk inventory GUI title
+menu.trunk.title: "&8Trunk"

@@ -1,0 +1,55 @@
+﻿car:
+  suspension:
+    rest-length: 0.55
+    stiffness: 21000.0
+    damping: 2100.0
+    wheel-radius: 0.36
+    step-height: 1.0
+
+  drivetrain:
+    engine-force: 9700.0
+    acceleration-forward: 1.0
+    acceleration-reverse-multiplier: 0.58
+    acceleration-curve-exponent: 1.0
+    brake-force: 15000.0
+    brake-multiplier: 1.0
+    max-forward-speed: 34.0
+    max-reverse-speed: 9.5
+
+  steering:
+    max-steer-deg: 28.0
+    wheel-base: 2.65
+    steer-response: 0.20
+    body-roll-limit-deg: 14.0
+    body-roll-response: 0.12
+    body-roll-strength: 0.55
+    tuning:
+      input-deadzone: 0.06
+      low-input-steer-boost: 1.04
+      low-input-response-bonus: 0.02
+      low-input-yaw-boost: 1.03
+      high-speed-reduction-start-speed: 8.0
+      high-speed-reduction-end-speed: 34.0
+      high-speed-max-reduction: 0.42
+
+  physics:
+    mass: 1250.0
+    drag-coeff: 0.018
+    rolling-resistance: 55.0
+    vertical-damping: 3.8
+    lateral-grip-ground: 5.4
+    lateral-grip-air: 0.9
+    max-tick-horizontal-delta-v: 0.74
+
+    air-control:
+      pitch-velocity-factor: 0.85
+      pitch-response: 0.12
+      roll-stabilize-response: 0.08
+
+  fuel:
+    tank-capacity: 60.0
+    initial-fuel: 35.0
+    consumption:
+      base-per-tick: 0.0008
+      speed-factor: 0.00020
+      throttle-factor: 0.00120

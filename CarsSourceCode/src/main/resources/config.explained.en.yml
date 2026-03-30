@@ -1,0 +1,64 @@
+# CoolCars config reference (EN)
+# This file is documentation-only and is not read by the plugin automatically.
+# Main runtime config: config.yml
+
+keys:
+  # Master switch for the car key system.
+  enabled: true
+
+  # If true, engine start is validated by key rules below.
+  require-key-to-start-engine: true
+
+  # If true, engine stop also requires a matching key in inventory.
+  require-key-to-stop-engine: true
+
+  # If true, owner can start own car without carrying a key.
+  allow-owner-start-without-key: true
+
+  # If true, non-owner can start the car if they have a matching key.
+  allow-non-owner-use-key: false
+
+  # If true, plugin searches key in full inventory.
+  # If false, only main hand + off-hand are checked.
+  check-entire-inventory: true
+
+  item:
+    # Material for generated key item (/cars key give <player> <car-uuid>).
+    material: TRIPWIRE_HOOK
+
+    # Supported placeholders:
+    # {model} {model_key} {car_uuid} {owner_name} {owner_uuid}
+    name: "&6Key for {model}"
+
+    # Lore supports the same placeholders as name.
+    lore:
+      - "&7Vehicle: &f{model}"
+      - "&7UUID: &f{car_uuid}"
+      - "&7Owner: &f{owner_name}"
+
+    # Optional per-language override (lang system integration).
+    localized:
+      en:
+        name: "&6Key for {model}"
+        lore:
+          - "&7Vehicle: &f{model}"
+          - "&7UUID: &f{car_uuid}"
+          - "&7Owner: &f{owner_name}"
+      ru:
+        name: "&6Ключ от {model}"
+        lore:
+          - "&7Машина: &f{model}"
+          - "&7UUID: &f{car_uuid}"
+          - "&7Владелец: &f{owner_name}"
+
+    # Set null or remove this line to disable custom model data.
+    custom-model-data: null
+
+    # Make key item unbreakable.
+    unbreakable: true
+
+sounds:
+  events:
+    landing:
+      # Sound key played on hard landing (fall impact).
+      key: "coolcars.landing"

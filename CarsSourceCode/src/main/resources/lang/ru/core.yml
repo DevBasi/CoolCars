@@ -1,0 +1,36 @@
+﻿prefix: "&8[&6Cars&8] &7"
+
+command.only-player: "{0}Только игроки могут использовать эту команду."
+command.no-permission: "{0}&cУ вас нет прав для этого действия."
+
+spawn.success: "{0}&aМашина заспавнена: &f{1}&a."
+spawn.mount-failed: "{0}&cНе удалось посадить водителя."
+spawn.unknown-model: "{0}&cНеизвестная модель машины: &f{1}"
+spawn.available-models: "{0}&eДоступные модели: &f{1}"
+
+seat.no-free: "{0}&cВ этой машине нет свободных мест."
+seat.enter-failed: "{0}&cНе удалось сесть в машину."
+seat.driver: "{0}&aТеперь вы водитель."
+seat.passenger: "{0}&aВы сели как пассажир."
+
+trunk.too-far: "{0}&cВы слишком далеко от багажника."
+
+fuel.hold-shift: "{0}&eЗажмите SHIFT и нажмите ПКМ для заправки."
+fuel.need-canister: "{0}&cДержите канистру с топливом в основной руке."
+fuel.canister-empty: "{0}&cВаша канистра пуста."
+fuel.tank-full: "{0}&eБак уже полный."
+fuel.started: "{0}&aЗаправка началась. Держите SHIFT, чтобы продолжить..."
+fuel.stopped-release: "{0}&eЗаправка остановлена: SHIFT отпущен."
+fuel.too-far: "{0}&cВы слишком далеко от точки заправки."
+fuel.stopped-no-can: "{0}&cЗаправка остановлена: канистра не в руке."
+fuel.complete: "{0}&aЗаправка завершена."
+
+repair.disabled: "{0}&cСистема урона по частям отключена в конфиге."
+repair.need-kit: "{0}&cДержите ремкомплект в основной руке."
+repair.kit-empty: "{0}&cРемкомплект пуст."
+repair.part-full: "{0}&e{1} уже полностью отремонтирован(а)."
+repair.started: "{0}&aРемонт начат: &f{1}&a. Держите SHIFT..."
+repair.stopped-release: "{0}&eРемонт остановлен: SHIFT отпущен."
+repair.too-far: "{0}&cСлишком далеко от ремонтируемой части."
+repair.stopped-no-kit: "{0}&cРемонт остановлен: ремкомплект не в руке."
+repair.complete: "{0}&aРемонт завершен: &f{1}"
