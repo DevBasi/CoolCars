@@ -12,7 +12,7 @@
 
   <br />
 
-  [🇺🇸 **English**] | [🇷🇺 **Русский**](README_RU.md)
+  [🇺🇸 **English**] | [🇷🇺 **Русский**](README.md)
 </div>
 
 ---
