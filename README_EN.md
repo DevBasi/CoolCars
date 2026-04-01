@@ -3,7 +3,7 @@
   <h1>CoolCars — An advanced vehicle system plugin for Minecraft</h1>
   
   <p align="center">
-    <b>Advanced physics, modular customization, and high performance.</b>
+    <b>Customizable physics, modular customization, and high performance.</b>
   </p>
 
   [![Minecraft Version](https://img.shields.io/badge/Minecraft-1.21+-62B06F?style=for-the-badge&logo=minecraft&logoColor=white)](https://www.minecraft.net/)
