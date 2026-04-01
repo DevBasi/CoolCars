@@ -3,7 +3,7 @@
   <h1>CoolCars — Плагин на продвинутые системы транспорта для Minecraft</h1>
   
   <p align="center">
-    <b>Продвинутая физика, модульная кастомизация и высокая производительность.</b>
+    <b>Настраиваемая физика, модульная кастомизация и высокая производительность.</b>
   </p>
 
   [![Minecraft Version](https://img.shields.io/badge/Minecraft-1.21+-62B06F?style=for-the-badge&logo=minecraft&logoColor=white)](https://www.minecraft.net/)
