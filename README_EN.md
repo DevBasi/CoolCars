@@ -1,77 +1,111 @@
 <div align="center">
-  <img src="https://mintcdn.com/coolcars/Nf4BiqjFcs6SEFCk/images/coolcars/logo-full.png?w=1100&fit=max&auto=format&n=Nf4BiqjFcs6SEFCk&q=85&s=519a7b4c36beba6e8c42eca5b5685fd6" width="800" alt="CoolCars Logo">
-  <h1>CoolCars — An advanced vehicle system plugin for Minecraft</h1>
-  
-  <p align="center">
-    <b>Customizable physics, modular customization, and high performance.</b>
-  </p>
 
-  [![Minecraft Version](https://img.shields.io/badge/Minecraft-1.21+-62B06F?style=for-the-badge&logo=minecraft&logoColor=white)](https://www.minecraft.net/)
-  [![Java Version](https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
-  [![Wiki](https://img.shields.io/badge/Wiki-Documentation-95A5A6?style=for-the-badge&logo=gitbook&logoColor=white)](https://coolcars.mintlify.app/ru/README)
+<img src="https://mintcdn.com/coolcars/Nf4BiqjFcs6SEFCk/images/coolcars/logo-full.png?w=1100&fit=max&auto=format&n=Nf4BiqjFcs6SEFCk&q=85&s=519a7b4c36beba6e8c42eca5b5685fd6" width="720" alt="CoolCars">
 
-  <br />
+# CoolCars
 
-  [🇺🇸 **English**] | [🇷🇺 **Русский**](README.md)
+**An advanced vehicle system plugin for Minecraft**
+
+Customizable physics · Modular customization · High performance
+
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.21%2B-62B06F?style=flat-square&logo=minecraft&logoColor=white)](https://www.minecraft.net/)
+[![Java](https://img.shields.io/badge/Java-21%2B-ED8B00?style=flat-square&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
+[![ProtocolLib](https://img.shields.io/badge/Requires-ProtocolLib-5865F2?style=flat-square)](https://www.spigotmc.org/resources/protocollib.1997/)
+[![Wiki](https://img.shields.io/badge/Docs-Wiki-95A5A6?style=flat-square&logo=gitbook&logoColor=white)](https://coolcars.mintlify.app/ru/README)
+
+[🇺🇸 **English**] · [🇷🇺 **Русский**](README.md)
+
 </div>
 
 ---
 
-## ⚙️ System Requirements
+## Features
 
-* **Server Version:** Minecraft **1.21** or higher (Paper, Purpur).
-* **Runtime Environment:** **Java 21** or higher.
-* **Dependencies:** [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/) (Required).
-
----
-
-## 📥 Installation
-
-1. Install the latest version of **ProtocolLib**.
-2. Drop `CoolCars-1.0.0.jar` into your server's `plugins/` folder.
-3. Restart the server to generate configuration files.
-4. Ensure your server resource pack is active to see 3D models.
+| | |
+|---|---|
+| 🏎 **Physics** | Inertia, acceleration, braking, and coasting |
+| 🌄 **Terrain** | Smooth movement over slabs, stairs, and slopes |
+| 💥 **Collisions** | Intelligent block and entity collision detection |
+| 🎨 **Customization** | YAML configs, CustomModelData, custom sounds |
+| ⛽ **Fuel System** | Configurable consumption and refueling |
+| 🔑 **Key Items** | Physical key system — lock and prevent theft |
+| 🎒 **Trunk** | Built-in inventory in every vehicle |
+| 📊 **HUD** | Real-time speedometer and fuel level in Action Bar |
 
 ---
 
-## 🚀 Core Features
+## Requirements
 
-### 🏎 Physics & Movement
-* **Inertia Simulation:** Calculated acceleration, braking, and coasting mechanics.
-* **Terrain Handling:** Smooth movement over slabs, stairs, and slopes.
-* **Collision System:** Intelligent block and entity collision detection.
-* **Suspension:** Visual chassis tilt animation during maneuvers.
-
-### 🎨 Customization (YAML)
-* **3D Model Support:** Easy `CustomModelData` integration from your resource pack.
-* **Technical Tuning:** Individual max speed, acceleration, and fuel capacity settings for each model.
-* **Sound Engine:** Support for custom engine start, driving, and signal sounds.
-
-### 🎮 Gameplay Mechanics
-* **Fuel System:** Configurable consumption and refueling system.
-* **Access Control:** Key Item system to lock/unlock vehicles and prevent theft.
-* **Storage:** Integrated trunk (inventory) for every vehicle.
-* **Dynamic HUD:** Real-time speedometer and fuel level display in the Action Bar.
+- **Server:** Paper or Purpur **1.21+**
+- **Java:** **21** or higher
+- **Dependency:** [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/) — required
 
 ---
 
-## 🐛 Bug Reports
+## Installation
 
-If you encounter any bugs or technical issues, please report them directly via Discord DM: **devbasi**
+```bash
+# 1. Install ProtocolLib (if not already installed)
+# 2. Copy the plugin into your server folder
+cp CoolCars-1.0.0.jar /your-server/plugins/
+
+# 3. Restart the server
+```
+
+4. Make sure your server resource pack is active — 3D models won't render without it.
 
 ---
 
-## ⌨️ Commands & Permissions
+## Commands
 
 | Command | Description | Permission |
-| :--- | :--- | :--- |
-| `/car spawn <model>` | Spawn a vehicle of the selected model | `coolcars.admin.spawn` |
+|:---|:---|:---|
+| `/car spawn <model>` | Spawn a vehicle | `coolcars.admin.spawn` |
 | `/car givekey <player> <model>` | Give a vehicle key to a player | `coolcars.admin.givekey` |
-| `/car list` | View all available vehicle models | `coolcars.player.list` |
+| `/car list` | View all available models | `coolcars.player.list` |
 | `/car reload` | Reload configuration files | `coolcars.admin.reload` |
 
 ---
 
+## Details
+
+<details>
+<summary><b>Physics & Movement</b></summary>
+
+- **Inertia simulation** — calculated acceleration, braking, and coasting mechanics
+- **Terrain handling** — smooth movement over slabs, stairs, and slopes
+- **Collision system** — intelligent block and entity collision detection
+- **Suspension** — visual chassis tilt animation during maneuvers
+
+</details>
+
+<details>
+<summary><b>Customization (YAML)</b></summary>
+
+- **3D models** — easy `CustomModelData` integration from your resource pack
+- **Technical tuning** — individual max speed, acceleration, and fuel capacity per model
+- **Sound engine** — custom engine start, driving, and signal sounds
+
+</details>
+
+<details>
+<summary><b>Gameplay Mechanics</b></summary>
+
+- **Fuel system** — configurable consumption and refueling
+- **Key items** — physical key system to lock/unlock vehicles and prevent theft
+- **Trunk** — integrated inventory for every vehicle
+- **Dynamic HUD** — real-time speedometer and fuel level in the Action Bar
+
+</details>
+
+---
+
+## Bug Reports
+
+Found an issue? Reach out via Discord DM: **devbasi**
+
+---
+
 <div align="center">
-  <sub>Developed by <b>PenguinTeam & BasiDev</b> for modern Minecraft networks.</sub>
+  <sub>Developed by <b>PenguinTeam & BasiDev</b> for modern Minecraft networks</sub>
 </div>
